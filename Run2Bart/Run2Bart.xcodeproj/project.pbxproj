@@ -1,0 +1,461 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C13CEDFB1704B873008EDAC6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C13CEDFA1704B873008EDAC6 /* UIKit.framework */; };
+		C13CEDFD1704B873008EDAC6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C13CEDFC1704B873008EDAC6 /* Foundation.framework */; };
+		C13CEDFF1704B873008EDAC6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C13CEDFE1704B873008EDAC6 /* CoreGraphics.framework */; };
+		C13CEE051704B873008EDAC6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C13CEE031704B873008EDAC6 /* InfoPlist.strings */; };
+		C13CEE071704B873008EDAC6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C13CEE061704B873008EDAC6 /* main.m */; };
+		C13CEE0B1704B873008EDAC6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C13CEE0A1704B873008EDAC6 /* AppDelegate.m */; };
+		C13CEE0D1704B873008EDAC6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C13CEE0C1704B873008EDAC6 /* Default.png */; };
+		C13CEE0F1704B873008EDAC6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C13CEE0E1704B873008EDAC6 /* Default@2x.png */; };
+		C13CEE111704B873008EDAC6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C13CEE101704B873008EDAC6 /* Default-568h@2x.png */; };
+		C13CEE141704B873008EDAC6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C13CEE131704B873008EDAC6 /* ViewController.m */; };
+		C13CEE171704B873008EDAC6 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C13CEE151704B873008EDAC6 /* ViewController.xib */; };
+		C13CEE1F1704B873008EDAC6 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C13CEE1E1704B873008EDAC6 /* SenTestingKit.framework */; };
+		C13CEE201704B873008EDAC6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C13CEDFA1704B873008EDAC6 /* UIKit.framework */; };
+		C13CEE211704B873008EDAC6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C13CEDFC1704B873008EDAC6 /* Foundation.framework */; };
+		C13CEE291704B873008EDAC6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C13CEE271704B873008EDAC6 /* InfoPlist.strings */; };
+		C13CEE2C1704B873008EDAC6 /* Run2BartTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C13CEE2B1704B873008EDAC6 /* Run2BartTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C13CEE221704B873008EDAC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C13CEDED1704B873008EDAC6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C13CEDF51704B873008EDAC6;
+			remoteInfo = Run2Bart;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C13CEDF61704B873008EDAC6 /* Run2Bart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Run2Bart.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C13CEDFA1704B873008EDAC6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C13CEDFC1704B873008EDAC6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C13CEDFE1704B873008EDAC6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C13CEE021704B873008EDAC6 /* Run2Bart-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Run2Bart-Info.plist"; sourceTree = "<group>"; };
+		C13CEE041704B873008EDAC6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C13CEE061704B873008EDAC6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C13CEE081704B873008EDAC6 /* Run2Bart-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Run2Bart-Prefix.pch"; sourceTree = "<group>"; };
+		C13CEE091704B873008EDAC6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C13CEE0A1704B873008EDAC6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C13CEE0C1704B873008EDAC6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		C13CEE0E1704B873008EDAC6 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		C13CEE101704B873008EDAC6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		C13CEE121704B873008EDAC6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C13CEE131704B873008EDAC6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C13CEE161704B873008EDAC6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		C13CEE1D1704B873008EDAC6 /* Run2BartTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Run2BartTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C13CEE1E1704B873008EDAC6 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		C13CEE261704B873008EDAC6 /* Run2BartTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Run2BartTests-Info.plist"; sourceTree = "<group>"; };
+		C13CEE281704B873008EDAC6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C13CEE2A1704B873008EDAC6 /* Run2BartTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Run2BartTests.h; sourceTree = "<group>"; };
+		C13CEE2B1704B873008EDAC6 /* Run2BartTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Run2BartTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C13CEDF31704B873008EDAC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C13CEDFB1704B873008EDAC6 /* UIKit.framework in Frameworks */,
+				C13CEDFD1704B873008EDAC6 /* Foundation.framework in Frameworks */,
+				C13CEDFF1704B873008EDAC6 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C13CEE191704B873008EDAC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C13CEE1F1704B873008EDAC6 /* SenTestingKit.framework in Frameworks */,
+				C13CEE201704B873008EDAC6 /* UIKit.framework in Frameworks */,
+				C13CEE211704B873008EDAC6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C13CEDEB1704B873008EDAC6 = {
+			isa = PBXGroup;
+			children = (
+				C13CEE001704B873008EDAC6 /* Run2Bart */,
+				C13CEE241704B873008EDAC6 /* Run2BartTests */,
+				C13CEDF91704B873008EDAC6 /* Frameworks */,
+				C13CEDF71704B873008EDAC6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C13CEDF71704B873008EDAC6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C13CEDF61704B873008EDAC6 /* Run2Bart.app */,
+				C13CEE1D1704B873008EDAC6 /* Run2BartTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C13CEDF91704B873008EDAC6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C13CEDFA1704B873008EDAC6 /* UIKit.framework */,
+				C13CEDFC1704B873008EDAC6 /* Foundation.framework */,
+				C13CEDFE1704B873008EDAC6 /* CoreGraphics.framework */,
+				C13CEE1E1704B873008EDAC6 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C13CEE001704B873008EDAC6 /* Run2Bart */ = {
+			isa = PBXGroup;
+			children = (
+				C13CEE091704B873008EDAC6 /* AppDelegate.h */,
+				C13CEE0A1704B873008EDAC6 /* AppDelegate.m */,
+				C13CEE121704B873008EDAC6 /* ViewController.h */,
+				C13CEE131704B873008EDAC6 /* ViewController.m */,
+				C13CEE151704B873008EDAC6 /* ViewController.xib */,
+				C13CEE011704B873008EDAC6 /* Supporting Files */,
+			);
+			path = Run2Bart;
+			sourceTree = "<group>";
+		};
+		C13CEE011704B873008EDAC6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C13CEE021704B873008EDAC6 /* Run2Bart-Info.plist */,
+				C13CEE031704B873008EDAC6 /* InfoPlist.strings */,
+				C13CEE061704B873008EDAC6 /* main.m */,
+				C13CEE081704B873008EDAC6 /* Run2Bart-Prefix.pch */,
+				C13CEE0C1704B873008EDAC6 /* Default.png */,
+				C13CEE0E1704B873008EDAC6 /* Default@2x.png */,
+				C13CEE101704B873008EDAC6 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C13CEE241704B873008EDAC6 /* Run2BartTests */ = {
+			isa = PBXGroup;
+			children = (
+				C13CEE2A1704B873008EDAC6 /* Run2BartTests.h */,
+				C13CEE2B1704B873008EDAC6 /* Run2BartTests.m */,
+				C13CEE251704B873008EDAC6 /* Supporting Files */,
+			);
+			path = Run2BartTests;
+			sourceTree = "<group>";
+		};
+		C13CEE251704B873008EDAC6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C13CEE261704B873008EDAC6 /* Run2BartTests-Info.plist */,
+				C13CEE271704B873008EDAC6 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C13CEDF51704B873008EDAC6 /* Run2Bart */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C13CEE2F1704B873008EDAC6 /* Build configuration list for PBXNativeTarget "Run2Bart" */;
+			buildPhases = (
+				C13CEDF21704B873008EDAC6 /* Sources */,
+				C13CEDF31704B873008EDAC6 /* Frameworks */,
+				C13CEDF41704B873008EDAC6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Run2Bart;
+			productName = Run2Bart;
+			productReference = C13CEDF61704B873008EDAC6 /* Run2Bart.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C13CEE1C1704B873008EDAC6 /* Run2BartTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C13CEE321704B873008EDAC6 /* Build configuration list for PBXNativeTarget "Run2BartTests" */;
+			buildPhases = (
+				C13CEE181704B873008EDAC6 /* Sources */,
+				C13CEE191704B873008EDAC6 /* Frameworks */,
+				C13CEE1A1704B873008EDAC6 /* Resources */,
+				C13CEE1B1704B873008EDAC6 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C13CEE231704B873008EDAC6 /* PBXTargetDependency */,
+			);
+			name = Run2BartTests;
+			productName = Run2BartTests;
+			productReference = C13CEE1D1704B873008EDAC6 /* Run2BartTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C13CEDED1704B873008EDAC6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = ThoughtWorks;
+			};
+			buildConfigurationList = C13CEDF01704B873008EDAC6 /* Build configuration list for PBXProject "Run2Bart" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C13CEDEB1704B873008EDAC6;
+			productRefGroup = C13CEDF71704B873008EDAC6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C13CEDF51704B873008EDAC6 /* Run2Bart */,
+				C13CEE1C1704B873008EDAC6 /* Run2BartTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C13CEDF41704B873008EDAC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C13CEE051704B873008EDAC6 /* InfoPlist.strings in Resources */,
+				C13CEE0D1704B873008EDAC6 /* Default.png in Resources */,
+				C13CEE0F1704B873008EDAC6 /* Default@2x.png in Resources */,
+				C13CEE111704B873008EDAC6 /* Default-568h@2x.png in Resources */,
+				C13CEE171704B873008EDAC6 /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C13CEE1A1704B873008EDAC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C13CEE291704B873008EDAC6 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C13CEE1B1704B873008EDAC6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C13CEDF21704B873008EDAC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C13CEE071704B873008EDAC6 /* main.m in Sources */,
+				C13CEE0B1704B873008EDAC6 /* AppDelegate.m in Sources */,
+				C13CEE141704B873008EDAC6 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C13CEE181704B873008EDAC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C13CEE2C1704B873008EDAC6 /* Run2BartTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C13CEE231704B873008EDAC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C13CEDF51704B873008EDAC6 /* Run2Bart */;
+			targetProxy = C13CEE221704B873008EDAC6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C13CEE031704B873008EDAC6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C13CEE041704B873008EDAC6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C13CEE151704B873008EDAC6 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C13CEE161704B873008EDAC6 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+		C13CEE271704B873008EDAC6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C13CEE281704B873008EDAC6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C13CEE2D1704B873008EDAC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C13CEE2E1704B873008EDAC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C13CEE301704B873008EDAC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Run2Bart/Run2Bart-Prefix.pch";
+				INFOPLIST_FILE = "Run2Bart/Run2Bart-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C13CEE311704B873008EDAC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Run2Bart/Run2Bart-Prefix.pch";
+				INFOPLIST_FILE = "Run2Bart/Run2Bart-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C13CEE331704B873008EDAC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Run2Bart.app/Run2Bart";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Run2Bart/Run2Bart-Prefix.pch";
+				INFOPLIST_FILE = "Run2BartTests/Run2BartTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		C13CEE341704B873008EDAC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Run2Bart.app/Run2Bart";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Run2Bart/Run2Bart-Prefix.pch";
+				INFOPLIST_FILE = "Run2BartTests/Run2BartTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C13CEDF01704B873008EDAC6 /* Build configuration list for PBXProject "Run2Bart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C13CEE2D1704B873008EDAC6 /* Debug */,
+				C13CEE2E1704B873008EDAC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C13CEE2F1704B873008EDAC6 /* Build configuration list for PBXNativeTarget "Run2Bart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C13CEE301704B873008EDAC6 /* Debug */,
+				C13CEE311704B873008EDAC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C13CEE321704B873008EDAC6 /* Build configuration list for PBXNativeTarget "Run2BartTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C13CEE331704B873008EDAC6 /* Debug */,
+				C13CEE341704B873008EDAC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C13CEDED1704B873008EDAC6 /* Project object */;
+}
