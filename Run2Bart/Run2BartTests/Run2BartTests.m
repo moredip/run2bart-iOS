@@ -23,10 +23,10 @@
     
     [super tearDown];
 }
-
-- (void)testExample
-{
-    STFail(@"Unit tests are not implemented yet in Run2BartTests");
-}
+//
+//- (void)testExample
+//{
+//    STFail(@"Unit tests are not implemented yet in Run2BartTests");
+//}
 
 @end
