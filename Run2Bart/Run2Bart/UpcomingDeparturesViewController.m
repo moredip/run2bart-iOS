@@ -7,18 +7,22 @@
 //
 
 #import "UpcomingDeparturesViewController.h"
+#import "Station.h"
+#import "UpcomingDeparture.h"
 
 @interface UpcomingDeparturesViewController ()
-
+@property(nonatomic,retain) Station *station;
+@property(nonatomic,retain) NSArray *departures;
 @end
 
 @implementation UpcomingDeparturesViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
+- (id)initForStation:(Station *)station
 {
-    self = [super initWithStyle:style];
+    self = [super init];
     if (self) {
-        // Custom initialization
+        self.station = station;
+        self.title = station.name;
     }
     return self;
 }
@@ -27,6 +31,15 @@
 {
     [super viewDidLoad];
     self.tableView.allowsSelection = NO;
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [self.station fetchUpcomingDeparturesAndOnSuccess:^(NSArray *departures) {
+        self.departures = departures;
+        [self.tableView reloadData];
+    } failure:^(NSError *error) {
+        // TODO: handle failure
+    }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,7 +60,7 @@
     if( !self.departures )
         return 1;
     else
-        return 0; // TODO
+        return self.departures.count;
     
 }
 
@@ -65,10 +78,14 @@
     if( !self.departures )
         return [self loadingTableViewCell];
     
+    UpcomingDeparture *departure = [self.departures objectAtIndex:indexPath.row];
+
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if( !cell )
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
     
-    // Configure the cell...
+    cell.textLabel.text = departure.destinationName;
     
     return cell;
 }

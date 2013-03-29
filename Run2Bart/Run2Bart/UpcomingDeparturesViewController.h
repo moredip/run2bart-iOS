@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class Station;
+
 @interface UpcomingDeparturesViewController : UITableViewController
-@property(nonatomic,retain) NSArray *departures;
+- (id)initForStation:(Station *)station;
 @end

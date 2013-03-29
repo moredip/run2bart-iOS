@@ -29,6 +29,8 @@
 		C177D83B170516FC00836BBF /* Station.m in Sources */ = {isa = PBXBuildFile; fileRef = C177D839170516FC00836BBF /* Station.m */; };
 		C177D83D1705EAE200836BBF /* stations.json in Resources */ = {isa = PBXBuildFile; fileRef = C177D83C1705EAE200836BBF /* stations.json */; };
 		C177D83E1705EAE200836BBF /* stations.json in Resources */ = {isa = PBXBuildFile; fileRef = C177D83C1705EAE200836BBF /* stations.json */; };
+		C177D8411705EF4A00836BBF /* UpcomingDeparture.m in Sources */ = {isa = PBXBuildFile; fileRef = C177D8401705EF4A00836BBF /* UpcomingDeparture.m */; };
+		C177D8421705EF4A00836BBF /* UpcomingDeparture.m in Sources */ = {isa = PBXBuildFile; fileRef = C177D8401705EF4A00836BBF /* UpcomingDeparture.m */; };
 		C177D8571705FE0400836BBF /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C177D8451705FE0400836BBF /* AFHTTPClient.m */; };
 		C177D8581705FE0400836BBF /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C177D8451705FE0400836BBF /* AFHTTPClient.m */; };
 		C177D8591705FE0400836BBF /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C177D8471705FE0400836BBF /* AFHTTPRequestOperation.m */; };
@@ -86,6 +88,8 @@
 		C177D838170516FC00836BBF /* Station.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Station.h; path = ../Station.h; sourceTree = "<group>"; };
 		C177D839170516FC00836BBF /* Station.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Station.m; path = ../Station.m; sourceTree = "<group>"; };
 		C177D83C1705EAE200836BBF /* stations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stations.json; sourceTree = "<group>"; };
+		C177D83F1705EF4A00836BBF /* UpcomingDeparture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpcomingDeparture.h; sourceTree = "<group>"; };
+		C177D8401705EF4A00836BBF /* UpcomingDeparture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpcomingDeparture.m; sourceTree = "<group>"; };
 		C177D8441705FE0400836BBF /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		C177D8451705FE0400836BBF /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		C177D8461705FE0400836BBF /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -173,6 +177,8 @@
 				C177D8301704B96700836BBF /* StationsViewController.m */,
 				C177D834170513D700836BBF /* UpcomingDeparturesViewController.h */,
 				C177D835170513D700836BBF /* UpcomingDeparturesViewController.m */,
+				C177D83F1705EF4A00836BBF /* UpcomingDeparture.h */,
+				C177D8401705EF4A00836BBF /* UpcomingDeparture.m */,
 				C13CEE011704B873008EDAC6 /* Supporting Files */,
 			);
 			path = Run2Bart;
@@ -355,6 +361,7 @@
 				C177D8311704B96700836BBF /* StationsViewController.m in Sources */,
 				C177D836170513D700836BBF /* UpcomingDeparturesViewController.m in Sources */,
 				C177D83A170516FC00836BBF /* Station.m in Sources */,
+				C177D8411705EF4A00836BBF /* UpcomingDeparture.m in Sources */,
 				C177D8571705FE0400836BBF /* AFHTTPClient.m in Sources */,
 				C177D8591705FE0400836BBF /* AFHTTPRequestOperation.m in Sources */,
 				C177D85B1705FE0400836BBF /* AFImageRequestOperation.m in Sources */,
@@ -375,6 +382,7 @@
 				C177D8321704B96700836BBF /* StationsViewController.m in Sources */,
 				C177D837170513D700836BBF /* UpcomingDeparturesViewController.m in Sources */,
 				C177D83B170516FC00836BBF /* Station.m in Sources */,
+				C177D8421705EF4A00836BBF /* UpcomingDeparture.m in Sources */,
 				C177D8581705FE0400836BBF /* AFHTTPClient.m in Sources */,
 				C177D85A1705FE0400836BBF /* AFHTTPRequestOperation.m in Sources */,
 				C177D85C1705FE0400836BBF /* AFImageRequestOperation.m in Sources */,
