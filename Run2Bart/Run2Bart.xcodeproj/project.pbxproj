@@ -16,8 +16,6 @@
 		C13CEE0D1704B873008EDAC6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C13CEE0C1704B873008EDAC6 /* Default.png */; };
 		C13CEE0F1704B873008EDAC6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C13CEE0E1704B873008EDAC6 /* Default@2x.png */; };
 		C13CEE111704B873008EDAC6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C13CEE101704B873008EDAC6 /* Default-568h@2x.png */; };
-		C13CEE141704B873008EDAC6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C13CEE131704B873008EDAC6 /* ViewController.m */; };
-		C13CEE171704B873008EDAC6 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C13CEE151704B873008EDAC6 /* ViewController.xib */; };
 		C13CEE1F1704B873008EDAC6 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C13CEE1E1704B873008EDAC6 /* SenTestingKit.framework */; };
 		C13CEE201704B873008EDAC6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C13CEDFA1704B873008EDAC6 /* UIKit.framework */; };
 		C13CEE211704B873008EDAC6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C13CEDFC1704B873008EDAC6 /* Foundation.framework */; };
@@ -51,9 +49,6 @@
 		C13CEE0C1704B873008EDAC6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		C13CEE0E1704B873008EDAC6 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		C13CEE101704B873008EDAC6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		C13CEE121704B873008EDAC6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C13CEE131704B873008EDAC6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		C13CEE161704B873008EDAC6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		C13CEE1D1704B873008EDAC6 /* Run2BartTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Run2BartTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C13CEE1E1704B873008EDAC6 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		C13CEE261704B873008EDAC6 /* Run2BartTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Run2BartTests-Info.plist"; sourceTree = "<group>"; };
@@ -123,9 +118,6 @@
 			children = (
 				C13CEE091704B873008EDAC6 /* AppDelegate.h */,
 				C13CEE0A1704B873008EDAC6 /* AppDelegate.m */,
-				C13CEE121704B873008EDAC6 /* ViewController.h */,
-				C13CEE131704B873008EDAC6 /* ViewController.m */,
-				C13CEE151704B873008EDAC6 /* ViewController.xib */,
 				C13CEE011704B873008EDAC6 /* Supporting Files */,
 				C177D82F1704B96700836BBF /* StationsViewController.h */,
 				C177D8301704B96700836BBF /* StationsViewController.m */,
@@ -241,7 +233,6 @@
 				C13CEE0D1704B873008EDAC6 /* Default.png in Resources */,
 				C13CEE0F1704B873008EDAC6 /* Default@2x.png in Resources */,
 				C13CEE111704B873008EDAC6 /* Default-568h@2x.png in Resources */,
-				C13CEE171704B873008EDAC6 /* ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,7 +269,6 @@
 			files = (
 				C13CEE071704B873008EDAC6 /* main.m in Sources */,
 				C13CEE0B1704B873008EDAC6 /* AppDelegate.m in Sources */,
-				C13CEE141704B873008EDAC6 /* ViewController.m in Sources */,
 				C177D8311704B96700836BBF /* StationsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,14 +299,6 @@
 				C13CEE041704B873008EDAC6 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		C13CEE151704B873008EDAC6 /* ViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C13CEE161704B873008EDAC6 /* en */,
-			);
-			name = ViewController.xib;
 			sourceTree = "<group>";
 		};
 		C13CEE271704B873008EDAC6 /* InfoPlist.strings */ = {
