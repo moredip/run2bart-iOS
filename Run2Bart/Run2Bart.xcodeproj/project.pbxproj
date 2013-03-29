@@ -20,7 +20,6 @@
 		C13CEE201704B873008EDAC6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C13CEDFA1704B873008EDAC6 /* UIKit.framework */; };
 		C13CEE211704B873008EDAC6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C13CEDFC1704B873008EDAC6 /* Foundation.framework */; };
 		C13CEE291704B873008EDAC6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C13CEE271704B873008EDAC6 /* InfoPlist.strings */; };
-		C13CEE2C1704B873008EDAC6 /* Run2BartTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C13CEE2B1704B873008EDAC6 /* Run2BartTests.m */; };
 		C177D8311704B96700836BBF /* StationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C177D8301704B96700836BBF /* StationsViewController.m */; };
 		C177D8321704B96700836BBF /* StationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C177D8301704B96700836BBF /* StationsViewController.m */; };
 		C177D836170513D700836BBF /* UpcomingDeparturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C177D835170513D700836BBF /* UpcomingDeparturesViewController.m */; };
@@ -81,8 +80,6 @@
 		C13CEE1E1704B873008EDAC6 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		C13CEE261704B873008EDAC6 /* Run2BartTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Run2BartTests-Info.plist"; sourceTree = "<group>"; };
 		C13CEE281704B873008EDAC6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C13CEE2A1704B873008EDAC6 /* Run2BartTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Run2BartTests.h; sourceTree = "<group>"; };
-		C13CEE2B1704B873008EDAC6 /* Run2BartTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Run2BartTests.m; sourceTree = "<group>"; };
 		C177D82F1704B96700836BBF /* StationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationsViewController.h; sourceTree = "<group>"; };
 		C177D8301704B96700836BBF /* StationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationsViewController.m; sourceTree = "<group>"; };
 		C177D834170513D700836BBF /* UpcomingDeparturesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpcomingDeparturesViewController.h; sourceTree = "<group>"; };
@@ -208,8 +205,6 @@
 		C13CEE241704B873008EDAC6 /* Run2BartTests */ = {
 			isa = PBXGroup;
 			children = (
-				C13CEE2A1704B873008EDAC6 /* Run2BartTests.h */,
-				C13CEE2B1704B873008EDAC6 /* Run2BartTests.m */,
 				C13CEE251704B873008EDAC6 /* Supporting Files */,
 				C1E8B2F5170616AE000E2F41 /* MyFirstSpec.m */,
 			);
@@ -393,7 +388,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C13CEE2C1704B873008EDAC6 /* Run2BartTests.m in Sources */,
 				C177D8321704B96700836BBF /* StationsViewController.m in Sources */,
 				C177D837170513D700836BBF /* UpcomingDeparturesViewController.m in Sources */,
 				C177D83B170516FC00836BBF /* Station.m in Sources */,
