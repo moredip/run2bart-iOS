@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-#import "ViewController.h"
+#import "StationsViewController.h"
 
 @implementation AppDelegate
 
@@ -16,8 +16,9 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
+    self.rootViewController = [[StationsViewController alloc] init];
+    self.rootViewController.stations = @[@"Foo",@"Bar",@"Baz"];
+    self.window.rootViewController = self.rootViewController;
     [self.window makeKeyAndVisible];
     return YES;
 }

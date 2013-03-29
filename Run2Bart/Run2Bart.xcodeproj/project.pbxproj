@@ -23,6 +23,8 @@
 		C13CEE211704B873008EDAC6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C13CEDFC1704B873008EDAC6 /* Foundation.framework */; };
 		C13CEE291704B873008EDAC6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C13CEE271704B873008EDAC6 /* InfoPlist.strings */; };
 		C13CEE2C1704B873008EDAC6 /* Run2BartTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C13CEE2B1704B873008EDAC6 /* Run2BartTests.m */; };
+		C177D8311704B96700836BBF /* StationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C177D8301704B96700836BBF /* StationsViewController.m */; };
+		C177D8321704B96700836BBF /* StationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C177D8301704B96700836BBF /* StationsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		C13CEE281704B873008EDAC6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C13CEE2A1704B873008EDAC6 /* Run2BartTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Run2BartTests.h; sourceTree = "<group>"; };
 		C13CEE2B1704B873008EDAC6 /* Run2BartTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Run2BartTests.m; sourceTree = "<group>"; };
+		C177D82F1704B96700836BBF /* StationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationsViewController.h; sourceTree = "<group>"; };
+		C177D8301704B96700836BBF /* StationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,8 @@
 				C13CEE131704B873008EDAC6 /* ViewController.m */,
 				C13CEE151704B873008EDAC6 /* ViewController.xib */,
 				C13CEE011704B873008EDAC6 /* Supporting Files */,
+				C177D82F1704B96700836BBF /* StationsViewController.h */,
+				C177D8301704B96700836BBF /* StationsViewController.m */,
 			);
 			path = Run2Bart;
 			sourceTree = "<group>";
@@ -273,6 +279,7 @@
 				C13CEE071704B873008EDAC6 /* main.m in Sources */,
 				C13CEE0B1704B873008EDAC6 /* AppDelegate.m in Sources */,
 				C13CEE141704B873008EDAC6 /* ViewController.m in Sources */,
+				C177D8311704B96700836BBF /* StationsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C13CEE2C1704B873008EDAC6 /* Run2BartTests.m in Sources */,
+				C177D8321704B96700836BBF /* StationsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +454,7 @@
 				C13CEE311704B873008EDAC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C13CEE321704B873008EDAC6 /* Build configuration list for PBXNativeTarget "Run2BartTests" */ = {
 			isa = XCConfigurationList;
@@ -454,6 +463,7 @@
 				C13CEE341704B873008EDAC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
