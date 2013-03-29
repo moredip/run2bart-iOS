@@ -25,6 +25,10 @@
 		C177D8321704B96700836BBF /* StationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C177D8301704B96700836BBF /* StationsViewController.m */; };
 		C177D836170513D700836BBF /* UpcomingDeparturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C177D835170513D700836BBF /* UpcomingDeparturesViewController.m */; };
 		C177D837170513D700836BBF /* UpcomingDeparturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C177D835170513D700836BBF /* UpcomingDeparturesViewController.m */; };
+		C177D83A170516FC00836BBF /* Station.m in Sources */ = {isa = PBXBuildFile; fileRef = C177D839170516FC00836BBF /* Station.m */; };
+		C177D83B170516FC00836BBF /* Station.m in Sources */ = {isa = PBXBuildFile; fileRef = C177D839170516FC00836BBF /* Station.m */; };
+		C177D83D1705EAE200836BBF /* stations.json in Resources */ = {isa = PBXBuildFile; fileRef = C177D83C1705EAE200836BBF /* stations.json */; };
+		C177D83E1705EAE200836BBF /* stations.json in Resources */ = {isa = PBXBuildFile; fileRef = C177D83C1705EAE200836BBF /* stations.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +65,9 @@
 		C177D8301704B96700836BBF /* StationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationsViewController.m; sourceTree = "<group>"; };
 		C177D834170513D700836BBF /* UpcomingDeparturesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpcomingDeparturesViewController.h; sourceTree = "<group>"; };
 		C177D835170513D700836BBF /* UpcomingDeparturesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpcomingDeparturesViewController.m; sourceTree = "<group>"; };
+		C177D838170516FC00836BBF /* Station.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Station.h; path = ../Station.h; sourceTree = "<group>"; };
+		C177D839170516FC00836BBF /* Station.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Station.m; path = ../Station.m; sourceTree = "<group>"; };
+		C177D83C1705EAE200836BBF /* stations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stations.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,11 +129,13 @@
 			children = (
 				C13CEE091704B873008EDAC6 /* AppDelegate.h */,
 				C13CEE0A1704B873008EDAC6 /* AppDelegate.m */,
-				C13CEE011704B873008EDAC6 /* Supporting Files */,
+				C177D838170516FC00836BBF /* Station.h */,
+				C177D839170516FC00836BBF /* Station.m */,
 				C177D82F1704B96700836BBF /* StationsViewController.h */,
 				C177D8301704B96700836BBF /* StationsViewController.m */,
 				C177D834170513D700836BBF /* UpcomingDeparturesViewController.h */,
 				C177D835170513D700836BBF /* UpcomingDeparturesViewController.m */,
+				C13CEE011704B873008EDAC6 /* Supporting Files */,
 			);
 			path = Run2Bart;
 			sourceTree = "<group>";
@@ -141,6 +150,7 @@
 				C13CEE0C1704B873008EDAC6 /* Default.png */,
 				C13CEE0E1704B873008EDAC6 /* Default@2x.png */,
 				C13CEE101704B873008EDAC6 /* Default-568h@2x.png */,
+				C177D83C1705EAE200836BBF /* stations.json */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -239,6 +249,7 @@
 				C13CEE0D1704B873008EDAC6 /* Default.png in Resources */,
 				C13CEE0F1704B873008EDAC6 /* Default@2x.png in Resources */,
 				C13CEE111704B873008EDAC6 /* Default-568h@2x.png in Resources */,
+				C177D83D1705EAE200836BBF /* stations.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C13CEE291704B873008EDAC6 /* InfoPlist.strings in Resources */,
+				C177D83E1705EAE200836BBF /* stations.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +289,7 @@
 				C13CEE0B1704B873008EDAC6 /* AppDelegate.m in Sources */,
 				C177D8311704B96700836BBF /* StationsViewController.m in Sources */,
 				C177D836170513D700836BBF /* UpcomingDeparturesViewController.m in Sources */,
+				C177D83A170516FC00836BBF /* Station.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +300,7 @@
 				C13CEE2C1704B873008EDAC6 /* Run2BartTests.m in Sources */,
 				C177D8321704B96700836BBF /* StationsViewController.m in Sources */,
 				C177D837170513D700836BBF /* UpcomingDeparturesViewController.m in Sources */,
+				C177D83B170516FC00836BBF /* Station.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

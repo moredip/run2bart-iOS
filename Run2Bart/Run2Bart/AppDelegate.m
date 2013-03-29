@@ -9,13 +9,22 @@
 #import "AppDelegate.h"
 
 #import "StationsViewController.h"
+#import "Station.h"
 
 @implementation AppDelegate
+
+- (NSArray *) loadStations{
+	NSString *file = [[NSBundle mainBundle] pathForResource:@"stations" ofType:@"json"];
+	NSData *data = [NSData dataWithContentsOfFile:file];
+	NSArray *rawStations = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+    
+    return [Station loadStations:rawStations];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     StationsViewController *stationsVC = [[StationsViewController alloc] init];
-    stationsVC.stations = @[@"Foo",@"Bar",@"Baz"];
+    stationsVC.stations = [self loadStations];
     
     self.navController = [[UINavigationController alloc] initWithRootViewController:stationsVC];
     

@@ -8,6 +8,7 @@
 
 #import "StationsViewController.h"
 #import "UpcomingDeparturesViewController.h"
+#import "Station.h"
 
 @interface StationsViewController ()
 @end
@@ -45,8 +46,8 @@
     if( !cell )
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     
-    NSString *station = [self.stations objectAtIndex:indexPath.row];
-    cell.textLabel.text = station;    
+    Station *station = [self.stations objectAtIndex:indexPath.row];
+    cell.textLabel.text = station.name;
     
     return cell;
 }
