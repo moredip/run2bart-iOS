@@ -8,12 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class StationsViewController;
-
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) StationsViewController *rootViewController;
+@property (strong, nonatomic) UINavigationController *navController;
 
 @end

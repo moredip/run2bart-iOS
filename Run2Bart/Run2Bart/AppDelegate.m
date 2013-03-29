@@ -14,12 +14,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    StationsViewController *stationsVC = [[StationsViewController alloc] init];
+    stationsVC.stations = @[@"Foo",@"Bar",@"Baz"];
+    
+    self.navController = [[UINavigationController alloc] initWithRootViewController:stationsVC];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.rootViewController = [[StationsViewController alloc] init];
-    self.rootViewController.stations = @[@"Foo",@"Bar",@"Baz"];
-    self.window.rootViewController = self.rootViewController;
+    self.window.rootViewController = self.navController;
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

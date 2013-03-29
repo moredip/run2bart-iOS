@@ -23,6 +23,8 @@
 		C13CEE2C1704B873008EDAC6 /* Run2BartTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C13CEE2B1704B873008EDAC6 /* Run2BartTests.m */; };
 		C177D8311704B96700836BBF /* StationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C177D8301704B96700836BBF /* StationsViewController.m */; };
 		C177D8321704B96700836BBF /* StationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C177D8301704B96700836BBF /* StationsViewController.m */; };
+		C177D836170513D700836BBF /* UpcomingDeparturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C177D835170513D700836BBF /* UpcomingDeparturesViewController.m */; };
+		C177D837170513D700836BBF /* UpcomingDeparturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C177D835170513D700836BBF /* UpcomingDeparturesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		C13CEE2B1704B873008EDAC6 /* Run2BartTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Run2BartTests.m; sourceTree = "<group>"; };
 		C177D82F1704B96700836BBF /* StationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationsViewController.h; sourceTree = "<group>"; };
 		C177D8301704B96700836BBF /* StationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationsViewController.m; sourceTree = "<group>"; };
+		C177D834170513D700836BBF /* UpcomingDeparturesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpcomingDeparturesViewController.h; sourceTree = "<group>"; };
+		C177D835170513D700836BBF /* UpcomingDeparturesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpcomingDeparturesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +125,8 @@
 				C13CEE011704B873008EDAC6 /* Supporting Files */,
 				C177D82F1704B96700836BBF /* StationsViewController.h */,
 				C177D8301704B96700836BBF /* StationsViewController.m */,
+				C177D834170513D700836BBF /* UpcomingDeparturesViewController.h */,
+				C177D835170513D700836BBF /* UpcomingDeparturesViewController.m */,
 			);
 			path = Run2Bart;
 			sourceTree = "<group>";
@@ -270,6 +276,7 @@
 				C13CEE071704B873008EDAC6 /* main.m in Sources */,
 				C13CEE0B1704B873008EDAC6 /* AppDelegate.m in Sources */,
 				C177D8311704B96700836BBF /* StationsViewController.m in Sources */,
+				C177D836170513D700836BBF /* UpcomingDeparturesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +286,7 @@
 			files = (
 				C13CEE2C1704B873008EDAC6 /* Run2BartTests.m in Sources */,
 				C177D8321704B96700836BBF /* StationsViewController.m in Sources */,
+				C177D837170513D700836BBF /* UpcomingDeparturesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
