@@ -138,7 +138,7 @@
 		C13CEDEB1704B873008EDAC6 = {
 			isa = PBXGroup;
 			children = (
-				C177D8431705FE0400836BBF /* AFNetworking */,
+				C1E8B2F117060C96000E2F41 /* vendor */,
 				C13CEE001704B873008EDAC6 /* Run2Bart */,
 				C13CEE241704B873008EDAC6 /* Run2BartTests */,
 				C13CEDF91704B873008EDAC6 /* Frameworks */,
@@ -243,6 +243,14 @@
 			);
 			name = AFNetworking;
 			path = ../vendor/AFNetworking/AFNetworking;
+			sourceTree = "<group>";
+		};
+		C1E8B2F117060C96000E2F41 /* vendor */ = {
+			isa = PBXGroup;
+			children = (
+				C177D8431705FE0400836BBF /* AFNetworking */,
+			);
+			name = vendor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
