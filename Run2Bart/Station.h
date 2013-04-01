@@ -15,7 +15,8 @@
 @property (nonatomic,readonly) NSString *name;
 
 + (NSArray *)loadStations:(NSArray *)rawStations;
-- (id)initFromDictionary:(NSDictionary *)dict;
+
+- (id)initWithName:(NSString *)name abbr:(NSString *)abbr;
 
 - (void)fetchUpcomingDeparturesAndOnSuccess:(void (^)(NSArray *departures))success                                    failure:(void (^)(NSError *error))failure;
 

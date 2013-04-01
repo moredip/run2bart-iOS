@@ -5,12 +5,19 @@
 SPEC_BEGIN(StationSpec)
 describe(@"Station", ^{
     
-    it(@"loads from a dictionary correctly",^{
-        NSDictionary *dict = @{@"abbr":@"station abbr",@"name":@"station name"};
-        Station *station = [[Station alloc] initFromDictionary:dict];
-
-        [[station.abbr should] equal:@"station abbr"];
-        [[station.name should] equal:@"station name"];
+    it(@"loads from JSON correctly",^{
+        NSArray *json = @[
+            @{@"abbr":@"s1",@"name":@"station one"},
+            @{@"abbr":@"s2",@"name":@"station two"},
+        ];
+        NSArray *stations = [Station loadStations:json];
+        
+        [[theValue(stations.count) should] equal:theValue(2)];
+        
+        [[[stations[0] abbr] should] equal:@"s1"];
+        [[[stations[0] name] should] equal:@"station one"];
+        [[[stations[1] abbr] should] equal:@"s2"];
+        [[[stations[1] name] should] equal:@"station two"];
     });
 });
 

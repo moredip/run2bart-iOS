@@ -17,19 +17,21 @@
 {
     NSMutableArray *stations = [NSMutableArray array];
     for(NSDictionary *rawStation in rawStations){
-        [stations addObject:[[Station alloc] initFromDictionary:rawStation]];
+        Station *station = [[Station alloc] initWithName:[rawStation objectForKey:@"name"]
+                                                    abbr:[rawStation objectForKey:@"abbr"]];
+        [stations addObject:station];
     }
     return stations;
 }
 
-- (id)initFromDictionary:(NSDictionary *)dict
+- (id)initWithName:(NSString *)name abbr:(NSString *)abbr
 {
     self = [super init];
     if (self) {
-        _name = [dict objectForKey:@"name"];
-		_abbr = [dict objectForKey:@"abbr"];
+        _name = name;
+		_abbr = abbr;
     }
-    return self;
+    return self;    
 }
 
 - (NSURL *)urlForUpcomingDepartures{
