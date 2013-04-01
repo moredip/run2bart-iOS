@@ -7,12 +7,15 @@
 //
 
 #import "UpcomingDeparturesViewController.h"
+#import "AppDelegate.h"
+#import "BartClient.h"
 #import "Station.h"
 #import "UpcomingDeparture.h"
 
 @interface UpcomingDeparturesViewController ()
 @property(nonatomic,retain) Station *station;
 @property(nonatomic,retain) NSArray *departures;
+@property(nonatomic,retain) BartClient *bartClient;
 @end
 
 @implementation UpcomingDeparturesViewController
@@ -23,6 +26,7 @@
     if (self) {
         self.station = station;
         self.title = station.name;
+        self.bartClient = [AppDelegate sharedInstance].bartClient;
     }
     return self;
 }
@@ -34,12 +38,13 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
-    [self.station fetchUpcomingDeparturesAndOnSuccess:^(NSArray *departures) {
-        self.departures = departures;
-        [self.tableView reloadData];
-    } failure:^(NSError *error) {
-        // TODO: handle failure
-    }];
+    [self.bartClient fetchUpcomingDeparturesForStation:self.station
+                                               success:^(NSArray *departures) {
+                                                   self.departures = departures;
+                                                   [self.tableView reloadData];
+                                               } failure:^(NSError *error) {
+                                                   //TODO: handle failure
+                                               }];
 }
 
 - (void)didReceiveMemoryWarning

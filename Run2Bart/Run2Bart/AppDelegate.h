@@ -8,10 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class BartClient;
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
 @property (strong, nonatomic) UINavigationController *navController;
+@property (readonly) BartClient *bartClient;
+
++(AppDelegate *)sharedInstance;
 
 @end

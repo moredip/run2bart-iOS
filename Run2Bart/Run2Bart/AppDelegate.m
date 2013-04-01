@@ -10,8 +10,13 @@
 
 #import "StationsViewController.h"
 #import "Station.h"
+#import "BartClient.h"
 
 @implementation AppDelegate
+
++(AppDelegate *)sharedInstance{
+    return [[UIApplication sharedApplication] delegate];
+}
 
 - (NSArray *) loadStations{
 	NSString *file = [[NSBundle mainBundle] pathForResource:@"stations" ofType:@"json"];
@@ -23,6 +28,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    _bartClient = [BartClient forProductionEnv];
+    
     StationsViewController *stationsVC = [[StationsViewController alloc] init];
     stationsVC.stations = [self loadStations];
     

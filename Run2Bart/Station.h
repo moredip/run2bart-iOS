@@ -18,8 +18,6 @@
 
 - (id)initWithName:(NSString *)name abbr:(NSString *)abbr;
 
-- (void)fetchUpcomingDeparturesAndOnSuccess:(void (^)(NSArray *departures))success                                    failure:(void (^)(NSError *error))failure;
-
 @end
 
 
