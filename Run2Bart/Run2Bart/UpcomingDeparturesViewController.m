@@ -69,30 +69,44 @@
     
 }
 
-- (UITableViewCell *)loadingTableViewCell{
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
-    cell.textLabel.text = @"Loading...";
-    cell.textLabel.font = [UIFont systemFontOfSize:20.0];
-    cell.detailTextLabel.font = [UIFont systemFontOfSize:30.0];
-    
-    return cell;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCell *)preparedTableViewCellForTableView:(UITableView *)tableView
 {
-    if( !self.departures )
-        return [self loadingTableViewCell];
-    
-    UpcomingDeparture *departure = [self.departures objectAtIndex:indexPath.row];
-
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if( !cell )
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
-    
-    cell.textLabel.text = departure.destinationName;
-    
+
+    cell.textLabel.font = [UIFont systemFontOfSize:20.0];
+    cell.detailTextLabel.font = [UIFont systemFontOfSize:30.0];
+
     return cell;
+}
+
+- (UITableViewCell *)loadingTableViewCellForTableView:(UITableView *)tableView
+{
+    UITableViewCell *cell = [self preparedTableViewCellForTableView:tableView];
+    cell.textLabel.text = @"Loading...";    
+    return cell;
+}
+
+- (UITableViewCell *)departureTableViewCellForDeparture:(UpcomingDeparture *)departure
+                                              tableView:(UITableView *)tableView
+{
+    UITableViewCell *cell = [self preparedTableViewCellForTableView:tableView];
+    cell.textLabel.text = departure.destinationName;
+    return cell;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if( !self.departures ){
+        return [self loadingTableViewCellForTableView:tableView];
+    }else{
+        UpcomingDeparture *departure = [self.departures objectAtIndex:indexPath.row];
+        return [self departureTableViewCellForDeparture:departure
+                                              tableView:tableView];
+    }
 }
 
 
