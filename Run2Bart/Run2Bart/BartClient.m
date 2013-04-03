@@ -37,7 +37,7 @@
                                   success:(void (^)(NSArray *departures))success
                                   failure:(void (^)(NSError *error))failure
 {
-    NSString *path = [@"/stations/" stringByAppendingPathComponent:station.abbr];
+    NSString *path = [@"stations" stringByAppendingPathComponent:station.abbr];
     
     [self.api getPath:path parameters:nil success:^(AFHTTPRequestOperation *operation, id json) {
         NSArray *upcomingDepartures = [UpcomingDeparture listOfUpcomingDepaturesfromJson:json];
