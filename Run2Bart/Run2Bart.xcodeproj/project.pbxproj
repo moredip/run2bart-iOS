@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C13455BB170F948300180527 /* UpcomingDeparturesViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C13455BA170F948300180527 /* UpcomingDeparturesViewControllerSpec.m */; };
 		C13CEDFB1704B873008EDAC6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C13CEDFA1704B873008EDAC6 /* UIKit.framework */; };
 		C13CEDFD1704B873008EDAC6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C13CEDFC1704B873008EDAC6 /* Foundation.framework */; };
 		C13CEDFF1704B873008EDAC6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C13CEDFE1704B873008EDAC6 /* CoreGraphics.framework */; };
@@ -67,6 +68,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C13455BA170F948300180527 /* UpcomingDeparturesViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpcomingDeparturesViewControllerSpec.m; sourceTree = "<group>"; };
 		C13CEDF61704B873008EDAC6 /* Run2Bart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Run2Bart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C13CEDFA1704B873008EDAC6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C13CEDFC1704B873008EDAC6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -113,7 +115,7 @@
 		C177D8551705FE0400836BBF /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		C177D8561705FE0400836BBF /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		C1E8B2F5170616AE000E2F41 /* MyFirstSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFirstSpec.m; sourceTree = "<group>"; };
-		C1E8B2F717061960000E2F41 /* libKiwi.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libKiwi.a; path = "../vendor/Kiwi/build/Release-iphoneos/libKiwi.a"; sourceTree = "<group>"; };
+		C1E8B2F717061960000E2F41 /* libKiwi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libKiwi.a; path = "../vendor/Kiwi/build/Release-iphoneos/libKiwi.a"; sourceTree = "<group>"; };
 		C1E8B2FB17063831000E2F41 /* StationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationSpec.m; sourceTree = "<group>"; };
 		C1E8B2FF170639A6000E2F41 /* StationsViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationsViewControllerSpec.m; sourceTree = "<group>"; };
 		C1E8B301170A4094000E2F41 /* BartClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BartClient.h; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				C1E8B2F5170616AE000E2F41 /* MyFirstSpec.m */,
 				C1E8B2FB17063831000E2F41 /* StationSpec.m */,
 				C1E8B2FF170639A6000E2F41 /* StationsViewControllerSpec.m */,
+				C13455BA170F948300180527 /* UpcomingDeparturesViewControllerSpec.m */,
 			);
 			path = Run2BartTests;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 				C1E8B2FC17063831000E2F41 /* StationSpec.m in Sources */,
 				C1E8B300170639A6000E2F41 /* StationsViewControllerSpec.m in Sources */,
 				C1E8B304170A4094000E2F41 /* BartClient.m in Sources */,
+				C13455BB170F948300180527 /* UpcomingDeparturesViewControllerSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

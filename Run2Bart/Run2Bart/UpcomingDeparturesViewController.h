@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @class Station;
+@class BartClient;
 
 @interface UpcomingDeparturesViewController : UITableViewController
+@property(nonatomic,retain) BartClient *bartClient;
+
 - (id)initForStation:(Station *)station;
 @end

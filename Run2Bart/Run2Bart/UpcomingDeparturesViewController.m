@@ -15,7 +15,6 @@
 @interface UpcomingDeparturesViewController ()
 @property(nonatomic,retain) Station *station;
 @property(nonatomic,retain) NSArray *departures;
-@property(nonatomic,retain) BartClient *bartClient;
 @end
 
 @implementation UpcomingDeparturesViewController
