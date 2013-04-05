@@ -4,7 +4,4 @@
    <FileRef
       location = "container:Run2Bart.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:../vendor/Kiwi/Kiwi.xcodeproj">
-   </FileRef>
 </Workspace>

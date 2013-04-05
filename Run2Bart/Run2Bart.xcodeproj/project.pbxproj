@@ -49,7 +49,6 @@
 		C177D8671705FE0400836BBF /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = C177D8561705FE0400836BBF /* UIImageView+AFNetworking.m */; };
 		C177D8681705FE0400836BBF /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = C177D8561705FE0400836BBF /* UIImageView+AFNetworking.m */; };
 		C1E8B2F6170616AE000E2F41 /* MyFirstSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E8B2F5170616AE000E2F41 /* MyFirstSpec.m */; };
-		C1E8B2F817061961000E2F41 /* libKiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1E8B2F717061960000E2F41 /* libKiwi.a */; };
 		C1E8B2FC17063831000E2F41 /* StationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E8B2FB17063831000E2F41 /* StationSpec.m */; };
 		C1E8B300170639A6000E2F41 /* StationsViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E8B2FF170639A6000E2F41 /* StationsViewControllerSpec.m */; };
 		C1E8B303170A4094000E2F41 /* BartClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E8B302170A4094000E2F41 /* BartClient.m */; };
@@ -113,7 +112,6 @@
 		C177D8551705FE0400836BBF /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		C177D8561705FE0400836BBF /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		C1E8B2F5170616AE000E2F41 /* MyFirstSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFirstSpec.m; sourceTree = "<group>"; };
-		C1E8B2F717061960000E2F41 /* libKiwi.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libKiwi.a; path = "../vendor/Kiwi/build/Release-iphoneos/libKiwi.a"; sourceTree = "<group>"; };
 		C1E8B2FB17063831000E2F41 /* StationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationSpec.m; sourceTree = "<group>"; };
 		C1E8B2FF170639A6000E2F41 /* StationsViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationsViewControllerSpec.m; sourceTree = "<group>"; };
 		C1E8B301170A4094000E2F41 /* BartClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BartClient.h; sourceTree = "<group>"; };
@@ -135,7 +133,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1E8B2F817061961000E2F41 /* libKiwi.a in Frameworks */,
 				C13CEE1F1704B873008EDAC6 /* SenTestingKit.framework in Frameworks */,
 				C13CEE201704B873008EDAC6 /* UIKit.framework in Frameworks */,
 				C13CEE211704B873008EDAC6 /* Foundation.framework in Frameworks */,
@@ -148,7 +145,6 @@
 		C13CEDEB1704B873008EDAC6 = {
 			isa = PBXGroup;
 			children = (
-				C1E8B2F717061960000E2F41 /* libKiwi.a */,
 				C1E8B2F117060C96000E2F41 /* vendor */,
 				C13CEE001704B873008EDAC6 /* Run2Bart */,
 				C13CEE241704B873008EDAC6 /* Run2BartTests */,
@@ -533,10 +529,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Run2Bart/Run2Bart-Prefix.pch";
 				INFOPLIST_FILE = "Run2BartTests/Run2BartTests-Info.plist";
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../vendor/Kiwi/Classes";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
@@ -552,10 +546,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Run2Bart/Run2Bart-Prefix.pch";
 				INFOPLIST_FILE = "Run2BartTests/Run2BartTests-Info.plist";
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../vendor/Kiwi/Classes";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
