@@ -3,7 +3,7 @@
 SPEC_BEGIN(MyFirstSpec)
 describe(@"Basic Arithmetic", ^{
     specify(^{
-        [[theValue(2+2) should] equal:theValue(4)];
+        [[theValue(12+1) should] equal:theValue(13)];
     });
 });
 
