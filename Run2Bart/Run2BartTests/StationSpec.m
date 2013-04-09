@@ -6,12 +6,20 @@ SPEC_BEGIN(StationSpec)
 describe(@"Station", ^{
     
     it(@"loads from JSON correctly",^{
-        NSArray *json = @[
+        //////////////////
+        // Arrange
+        NSArray *rawStations = @[
             @{@"abbr":@"s1",@"name":@"station one"},
             @{@"abbr":@"s2",@"name":@"station two"},
         ];
-        NSArray *stations = [Station loadStations:json];
         
+        //////////////////
+        // Act
+        NSArray *stations = [Station loadStations:rawStations];
+        
+        
+        //////////////////
+        // Assert
         [[theValue(stations.count) should] equal:theValue(2)];
         
         [[[stations[0] abbr] should] equal:@"s1"];

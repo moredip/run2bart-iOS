@@ -25,8 +25,8 @@
 {
     self = [super init];
     if (self) {
-        _name = name;
-		_abbr = abbr;
+        _name = [name copy];
+		_abbr = [abbr copy];
     }
     return self;    
 }

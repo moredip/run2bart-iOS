@@ -15,19 +15,31 @@
 {
     NSMutableArray *upcomingDepartures = [NSMutableArray array];
     for(NSDictionary *rawDeparture in rawJson){
-        [upcomingDepartures addObject:[[UpcomingDeparture alloc] initFromJson:rawDeparture]];
+        UpcomingDeparture *departure = [[UpcomingDeparture alloc] initWithDestinationName:[rawDeparture objectForKey:@"dest_name"]
+                                                                                      etd:[rawDeparture objectForKey:@"etd"]];
+        [upcomingDepartures addObject:departure];
     }
     return upcomingDepartures;
 }
 
-- (id)initFromJson:(NSDictionary *)dict
+- (id)initWithDestinationName:(NSString *)destinationName etd:(NSNumber *) etd
 {
     self = [super init];
     if (self) {
-        _etdInMinutes = [dict objectForKey:@"etd"];
-        _destinationName = [dict objectForKey:@"dest_name"];
+        _etdInMinutes = [etd copy];
+        _destinationName = [destinationName copy];
     }
     return self;
+}
+
+- (NSString *) etdToDisplay{
+    if( [self.etdInMinutes isEqualToNumber:@(0)] ){
+        return @"now";
+    }else if( [self.etdInMinutes isEqualToNumber:@(1)] ){
+        return @"1 min";
+    }else{
+        return [NSString stringWithFormat:@"%@ mins", self.etdInMinutes];
+    }
 }
 
 @end

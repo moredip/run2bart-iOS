@@ -14,7 +14,6 @@
 
 @interface UpcomingDeparturesViewController ()
 @property(nonatomic,retain) Station *station;
-@property(nonatomic,retain) NSArray *departures;
 @end
 
 @implementation UpcomingDeparturesViewController
@@ -93,6 +92,7 @@
 {
     UITableViewCell *cell = [self preparedTableViewCellForTableView:tableView];
     cell.textLabel.text = departure.destinationName;
+    cell.detailTextLabel.text = departure.etdToDisplay;
     return cell;
 }
 

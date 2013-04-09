@@ -13,6 +13,7 @@
 
 @interface UpcomingDeparturesViewController : UITableViewController
 @property(nonatomic,retain) BartClient *bartClient;
+@property(nonatomic,retain) NSArray *departures;
 
 - (id)initForStation:(Station *)station;
 @end

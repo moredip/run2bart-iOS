@@ -13,4 +13,6 @@
 @property (nonatomic,readonly) NSNumber *etdInMinutes;
 
 +(NSArray *)listOfUpcomingDepaturesfromJson:(NSArray *)rawJson;
+- (id)initWithDestinationName:(NSString *)destinationName etd:(NSNumber *) etd;
+- (NSString *) etdToDisplay;
 @end
