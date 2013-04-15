@@ -74,8 +74,8 @@
     if( !cell )
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
 
-    cell.textLabel.font = [UIFont systemFontOfSize:20.0];
-    cell.detailTextLabel.font = [UIFont systemFontOfSize:30.0];
+    cell.textLabel.font = [UIFont systemFontOfSize:18.0];
+    cell.detailTextLabel.font = [UIFont systemFontOfSize:24.0];
 
     return cell;
 }
