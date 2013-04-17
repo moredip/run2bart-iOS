@@ -1,8 +1,8 @@
 #import "Kiwi.h"
 
-SPEC_BEGIN(MyFirstSpec)
+SPEC_BEGIN(ExampleSpec)
 describe(@"Basic Arithmetic", ^{
-    specify(^{
+    it(@"can increment 12",^{
         [[theValue(12+1) should] equal:theValue(13)];
     });
 });
