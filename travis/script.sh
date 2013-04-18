@@ -1,5 +1,5 @@
 #!/bin/sh
 
-brew install waxsim
+brew install ios-sim
 
-rake xcode:build
+rake ci
