@@ -511,6 +511,7 @@
 		C13CEE301704B873008EDAC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Run2Bart/Run2Bart-Prefix.pch";
 				INFOPLIST_FILE = "Run2Bart/Run2Bart-Info.plist";
@@ -522,6 +523,7 @@
 		C13CEE311704B873008EDAC6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Run2Bart/Run2Bart-Prefix.pch";
 				INFOPLIST_FILE = "Run2Bart/Run2Bart-Info.plist";
