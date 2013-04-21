@@ -11,6 +11,7 @@ namespace 'xcode' do
 
   XcodeBuild::Tasks::BuildTask.new('unit-tests') do |t|
     t.invoke_from_within = './Run2Bart'
+    t.workspace = "Run2Bart.xcworkspace"
     t.configuration = "Debug"
     t.sdk = "iphonesimulator"
     t.scheme = 'CommandLineTests'
