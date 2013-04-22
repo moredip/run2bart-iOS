@@ -8,3 +8,5 @@ cp $IOS_SIM_DIR/bin/ios-sim ./bin/ios-sim
 gem install travis-artifacts
 
 rake ci:start-recording
+
+screencapture before_script.jpg

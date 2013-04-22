@@ -1,5 +1,7 @@
 #!/bin/sh
 
+screencapture after_script.jpg
+
 rake ci:stop-recording
 rake ci:save-recording["travis-build-$TRAVIS_BUILD_NUMBER"]
 
