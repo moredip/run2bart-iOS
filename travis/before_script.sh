@@ -6,7 +6,9 @@ mkdir bin
 cp $IOS_SIM_DIR/bin/ios-sim ./bin/ios-sim
 
 gem install travis-artifacts
+TRAVIS_ARTIFACT_DIR=`pwd`/artifacts
+mkdir -p $TRAVIS_ARTIFACT_DIR
 
 rake ci:start-recording
 
-screencapture before_script.jpg
+screencapture $TRAVIS_ARTIFACT_DIR/before_script.jpg
