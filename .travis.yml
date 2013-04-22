@@ -1,5 +1,19 @@
+---
 language: objective-c
 before_script: travis/before_script.sh
 script: travis/script.sh
 after_script: travis/after_script.sh
+env:
+  global:
+  - "ARTIFACTS_AWS_REGION=us-east-1"
+  - "ARTIFACTS_S3_BUCKET=travis-artifacts"
+  - secure: ! 'GkrqJk+2PU8xM3FCnTd9WNZ/iLg5voDiPVPRM15SMjj3QlXDME/YCHDjxVDN
 
+      zOvYbNs5TyXpf1kdmtgGnJqYQLnr7sDsNIAUT9nIj2jnIG3Cd7AFQnysExHF
+
+      9/8e1+DOb4PmyY0NG7ck7m7Ybns8Ag7nxILTpyG+cSFiqm7bG2A='
+  - secure: ! 'biciuS/FnBcdgONkaB/MtXkkqGgxB6KnSyGV4zj1Jz2qU+Tu9jGyid+CPvHt
+
+      m5OjU1G6oyoI+D3RaQ3dzqcXLFmnQZaUlkB0AmNWMpSoisFPkh878GeR9Xy3
+
+      6JKqkNOTWlDtlUIB17gsvd6AijUS2DZw9gBYoclcFnXEw63JnRs='
