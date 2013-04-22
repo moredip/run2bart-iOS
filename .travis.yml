@@ -5,6 +5,7 @@ script: travis/script.sh
 after_script: travis/after_script.sh
 env:
   global:
+  - "TRAVIS_ARTIFACTS_DIR=$TRAVIS_BUILD_DIR/artifacts"
   - "ARTIFACTS_AWS_REGION=us-east-1"
   - "ARTIFACTS_S3_BUCKET=travis-artifacts"
   - secure: ! 'GkrqJk+2PU8xM3FCnTd9WNZ/iLg5voDiPVPRM15SMjj3QlXDME/YCHDjxVDN
