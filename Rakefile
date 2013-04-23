@@ -53,6 +53,23 @@ desc "build and run frank tests"
 task :frank => ["frank:build","frank:test"]
 
 
+namespace :shenzhen do
+  task :build do
+    sh %Q|(cd #{PROJECT_DIR} && ipa build -s Run2Bart)|
+  end
+  
+  task :distribute, [:build_name, :build_url] => [:build] do |task,args|
+    build_notes = "## Machine-generated build\n"
+    if (name = args[:build_name]) && (url = args[:build_url])
+      build_notes << "This release was pooped out of build [#{name}](#{url})"
+    else
+      build_notes << "This release was manually triggered from a developer machine"
+    end
+
+    sh %Q|(cd #{PROJECT_DIR} && ipa distribute:hockeyapp --token "$HOCKEY_APP_TOKEN" --markdown -m '#{build_notes}')|
+  end
+end
+
 task 'quit-simulator' do
   sh %Q|osascript -e 'tell app "iPhone Simulator" to quit'|
 end
