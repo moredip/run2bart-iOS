@@ -1,3 +1,7 @@
+#!/bin/sh
+
+env
+
 xcodebuild -list -workspace Run2Bart/Run2Bart.xcworkspace
 
 brew install ios-sim
@@ -7,7 +11,5 @@ cp $IOS_SIM_DIR/bin/ios-sim ./bin/ios-sim
 
 gem install travis-artifacts
 mkdir -p artifacts
-
-rake ci:start-recording
 
 screencapture artifacts/before_script.jpg
