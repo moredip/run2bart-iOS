@@ -11,4 +11,4 @@ mv /tmp/screenies artifacts/screenies
 
 screencapture artifacts/after_script_b.jpg
 
-travis-artifacts upload --path artifacts --target-path $TRAVIS_BUILD_ID/$TRAVIS_JOB_ID
+travis-artifacts upload --path artifacts --target-path $TRAVIS_REPO_SLUG/$TRAVIS_BUILD_ID/$TRAVIS_JOB_ID
