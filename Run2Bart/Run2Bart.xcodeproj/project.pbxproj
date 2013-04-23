@@ -520,6 +520,14 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Run2Bart/Run2Bart-Prefix.pch";
 				INFOPLIST_FILE = "Run2Bart/Run2Bart-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRANK_LIBRARY_SEARCH_PATHS)",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"$(FRANK_LDFLAGS)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
