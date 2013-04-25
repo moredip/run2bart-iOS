@@ -15,18 +15,32 @@ describe( @"UpcomingDeparturesViewController ", ^{
         departuresVC = [[UpcomingDeparturesViewController alloc] initForStation:station];
     });
     
-    describe(@"loading upcoming departures", ^{
-        it( @"asks the api client to load the station's departures", ^{
+    
+    describe(@"the VC's view appearing", ^{
+        it( @"asks the api client to load the upcoming departures", ^{
             id mockBartClient = [KWMock mockForClass:[BartClient class]];
             departuresVC.bartClient = mockBartClient;
             
             [[mockBartClient should] receive:@selector(fetchUpcomingDeparturesForStation:success:failure:)
                                    andReturn:nil];
-            
-            //TODO: check arguments passed into the client
-            
+                        
             [departuresVC viewWillAppear:YES];
         });
+
+        it( @"it sets the refresh control to indicate departures are being loaded", ^{
+            [[theValue(departuresVC.refreshControl.refreshing) should] beFalse];
+            [departuresVC viewWillAppear:YES];
+            [[theValue(departuresVC.refreshControl.refreshing) should] beTrue];
+        });
+        
+        // it loads departures for the right station
+        // describe success:
+        //   it ends refreshing
+        //   it displays the dea
+        // describe failure:
+        //   it ends refreshing
+        //   it displays an error?
+        
     });
     
     describe(@"rendering departures", ^{

@@ -14,6 +14,9 @@
 
 @interface UpcomingDeparturesViewController ()
 @property(nonatomic,retain) Station *station;
+
+- (void) refreshUpcomingDepartures;
+
 @end
 
 @implementation UpcomingDeparturesViewController
@@ -25,6 +28,8 @@
         self.station = station;
         self.title = station.name;
         self.bartClient = [AppDelegate sharedInstance].bartClient;
+        self.refreshControl = [[UIRefreshControl alloc] init];
+        self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Updating upcoming departures"];
     }
     return self;
 }
@@ -36,13 +41,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
-    [self.bartClient fetchUpcomingDeparturesForStation:self.station
-                                               success:^(NSArray *departures) {
-                                                   self.departures = departures;
-                                                   [self.tableView reloadData];
-                                               } failure:^(NSError *error) {
-                                                   //TODO: handle failure
-                                               }];
+    [self refreshUpcomingDepartures];
 }
 
 - (void)didReceiveMemoryWarning
@@ -60,52 +59,33 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if( !self.departures )
-        return 1;
-    else
-        return self.departures.count;
-    
+    return self.departures.count;
 }
 
-- (UITableViewCell *)preparedTableViewCellForTableView:(UITableView *)tableView
+- (void) configureTableViewCell:(UITableViewCell *)cell forDeparture:(UpcomingDeparture *)departure
+{
+    cell.textLabel.font = [UIFont systemFontOfSize:18.0];
+    cell.detailTextLabel.font = [UIFont systemFontOfSize:24.0];
+    cell.textLabel.text = departure.destinationName;
+    cell.detailTextLabel.text = departure.etdToDisplay;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForDeparture:(UpcomingDeparture *)departure
+                                              
 {
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if( !cell )
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
-
-    cell.textLabel.font = [UIFont systemFontOfSize:18.0];
-    cell.detailTextLabel.font = [UIFont systemFontOfSize:24.0];
-
-    return cell;
-}
-
-- (UITableViewCell *)loadingTableViewCellForTableView:(UITableView *)tableView
-{
-    UITableViewCell *cell = [self preparedTableViewCellForTableView:tableView];
-    cell.textLabel.text = @"Loading...";    
-    return cell;
-}
-
-- (UITableViewCell *)departureTableViewCellForDeparture:(UpcomingDeparture *)departure
-                                              tableView:(UITableView *)tableView
-{
-    UITableViewCell *cell = [self preparedTableViewCellForTableView:tableView];
-    cell.textLabel.text = departure.destinationName;
-    cell.detailTextLabel.text = departure.etdToDisplay;
+    [self configureTableViewCell:cell forDeparture:departure];
     return cell;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if( !self.departures ){
-        return [self loadingTableViewCellForTableView:tableView];
-    }else{
-        UpcomingDeparture *departure = [self.departures objectAtIndex:indexPath.row];
-        return [self departureTableViewCellForDeparture:departure
-                                              tableView:tableView];
-    }
+    UpcomingDeparture *departure = [self.departures objectAtIndex:indexPath.row];
+    return [self tableView:tableView cellForDeparture:departure];
 }
 
 
@@ -115,5 +95,20 @@
 {
     // Nothing to do
 }
+
+#pragma mark - 
+
+- (void) refreshUpcomingDepartures{
+    [self.refreshControl beginRefreshing];
+    [self.bartClient fetchUpcomingDeparturesForStation:self.station
+                                               success:^(NSArray *departures) {
+                                                   [self.refreshControl endRefreshing];
+                                                   self.departures = departures;
+                                                   [self.tableView reloadData];
+                                               } failure:^(NSError *error) {
+                                                   [self.refreshControl endRefreshing];
+                                               }];
+}
+
 
 @end
