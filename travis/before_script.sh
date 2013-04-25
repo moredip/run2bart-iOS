@@ -10,6 +10,6 @@ mkdir bin
 cp $IOS_SIM_DIR/bin/ios-sim ./bin/ios-sim
 
 gem install travis-artifacts
-mkdir -p artifacts
+mkdir -p $TRAVIS_ARTIFACTS_DIR
 
-screencapture artifacts/before_script.jpg
+screencapture $TRAVIS_ARTIFACTS_DIR/before_script.jpg
