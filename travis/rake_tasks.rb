@@ -19,7 +19,7 @@ namespace :ci do
   task "distribute" do
     build_name = "Travis Build #{ENV['TRAVIS_BUILD_NUMBER']}" 
     build_url = ENV['TRAVIS_BUILD_URL']
-    Task["shenzhen:distribute"].invoke(build_name,build_url)
+    Rake::Task["shenzhen:distribute"].invoke(build_name,build_url)
   end
   
 end
