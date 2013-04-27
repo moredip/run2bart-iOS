@@ -55,7 +55,7 @@ task :frank => ["frank:build","frank:test"]
 
 namespace :shenzhen do
   task :build do
-    sh %Q|(cd #{PROJECT_DIR} && ipa build -c Debug -s Run2Bart --clean --no-archive)|
+    sh %Q|(cd #{PROJECT_DIR} && ipa build -c Debug -s Run2Bart --clean --no-archive --trace)|
   end
   
   task :distribute, [:build_name, :build_url] => [:build] do |task,args|
