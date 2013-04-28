@@ -1,6 +1,6 @@
 require 'pathname'
 
-task :ci => ['clear-artifacts','ci:build','unit-tests','ci:frank','ci:distribute']
+task :ci => ['clear-artifacts','ci:build','unit-tests','ci:frank']
 
 namespace :ci do
   
