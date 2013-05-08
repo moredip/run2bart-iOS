@@ -20,6 +20,34 @@
                ReferencedContainer = "container:Run2Bart.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F5015B9E11583A77002E9A98"
+               BuildableName = "libKiwi.a"
+               BlueprintName = "Kiwi"
+               ReferencedContainer = "container:../vendor/Kiwi/Kiwi.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C13CEE1C1704B873008EDAC6"
+               BuildableName = "Run2BartTests.octest"
+               BlueprintName = "Run2BartTests"
+               ReferencedContainer = "container:Run2Bart.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
