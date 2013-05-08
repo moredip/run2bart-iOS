@@ -50,7 +50,6 @@
 		C177D8661705FE0400836BBF /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C177D8541705FE0400836BBF /* AFXMLRequestOperation.m */; };
 		C177D8671705FE0400836BBF /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = C177D8561705FE0400836BBF /* UIImageView+AFNetworking.m */; };
 		C177D8681705FE0400836BBF /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = C177D8561705FE0400836BBF /* UIImageView+AFNetworking.m */; };
-		C1D746AC171FC6D8002AF6FD /* SlowSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C1D746AB171FC6D8002AF6FD /* SlowSpec.m */; };
 		C1E8B2F6170616AE000E2F41 /* ExampleSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E8B2F5170616AE000E2F41 /* ExampleSpec.m */; };
 		C1E8B2F817061961000E2F41 /* libKiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1E8B2F717061960000E2F41 /* libKiwi.a */; };
 		C1E8B2FC17063831000E2F41 /* StationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E8B2FB17063831000E2F41 /* StationSpec.m */; };
@@ -117,7 +116,6 @@
 		C177D8541705FE0400836BBF /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
 		C177D8551705FE0400836BBF /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		C177D8561705FE0400836BBF /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
-		C1D746AB171FC6D8002AF6FD /* SlowSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlowSpec.m; sourceTree = "<group>"; };
 		C1E8B2F5170616AE000E2F41 /* ExampleSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleSpec.m; sourceTree = "<group>"; };
 		C1E8B2F717061960000E2F41 /* libKiwi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libKiwi.a; path = "../vendor/Kiwi/build/Release-iphoneos/libKiwi.a"; sourceTree = "<group>"; };
 		C1E8B2FB17063831000E2F41 /* StationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationSpec.m; sourceTree = "<group>"; };
@@ -227,7 +225,6 @@
 				C1E8B2FF170639A6000E2F41 /* StationsViewControllerSpec.m */,
 				C13455BA170F948300180527 /* UpcomingDeparturesViewControllerSpec.m */,
 				C13455BD1714801900180527 /* UpcomingDeparturesSpec.m */,
-				C1D746AB171FC6D8002AF6FD /* SlowSpec.m */,
 			);
 			path = Run2BartTests;
 			sourceTree = "<group>";
@@ -430,7 +427,6 @@
 				C1E8B304170A4094000E2F41 /* BartClient.m in Sources */,
 				C13455BB170F948300180527 /* UpcomingDeparturesViewControllerSpec.m in Sources */,
 				C13455BE1714801900180527 /* UpcomingDeparturesSpec.m in Sources */,
-				C1D746AC171FC6D8002AF6FD /* SlowSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
