@@ -23,16 +23,16 @@ describe( @"UpcomingDeparturesViewController ", ^{
             
             [[mockBartClient should] receive:@selector(fetchUpcomingDeparturesForStation:success:failure:)
                                    andReturn:nil];
-                        
+
             [departuresVC viewWillAppear:YES];
         });
 
-        it( @"it sets the refresh control to indicate departures are being loaded", ^{
+        it( @"sets the refresh control to indicate departures are being loaded", ^{
             [[theValue(departuresVC.refreshControl.refreshing) should] beFalse];
             [departuresVC viewWillAppear:YES];
             [[theValue(departuresVC.refreshControl.refreshing) should] beTrue];
         });
-        
+                
         // it loads departures for the right station
         // describe success:
         //   it ends refreshing
@@ -41,6 +41,18 @@ describe( @"UpcomingDeparturesViewController ", ^{
         //   it ends refreshing
         //   it displays an error?
         
+    });
+    
+    describe(@"refresh control", ^{
+        it( @"responds to a refresh control pull down by fetching upcoming departures", ^{
+            id mockBartClient = [KWMock mockForClass:[BartClient class]];
+            departuresVC.bartClient = mockBartClient;
+            
+            [[mockBartClient should] receive:@selector(fetchUpcomingDeparturesForStation:success:failure:)
+                                   andReturn:nil];
+
+            [departuresVC.refreshControl sendActionsForControlEvents:UIControlEventValueChanged];
+        });
     });
     
     describe(@"rendering departures", ^{

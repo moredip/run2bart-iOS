@@ -30,6 +30,7 @@
         self.bartClient = [AppDelegate sharedInstance].bartClient;
         self.refreshControl = [[UIRefreshControl alloc] init];
         self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Updating upcoming departures"];
+        [self.refreshControl addTarget:self action:@selector(refreshControlDidChange:) forControlEvents:UIControlEventValueChanged];
     }
     return self;
 }
@@ -86,6 +87,10 @@
 {
     UpcomingDeparture *departure = [self.departures objectAtIndex:indexPath.row];
     return [self tableView:tableView cellForDeparture:departure];
+}
+
+- (void)refreshControlDidChange:(id)sender{
+    [self refreshUpcomingDepartures];
 }
 
 
