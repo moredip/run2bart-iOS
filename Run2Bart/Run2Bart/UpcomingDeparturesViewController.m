@@ -30,6 +30,8 @@
         self.bartClient = [AppDelegate sharedInstance].bartClient;
         self.refreshControl = [[UIRefreshControl alloc] init];
         self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Updating upcoming departures"];
+        [self.refreshControl addTarget:self action:@selector(refreshControlValueChanged:) forControlEvents:UIControlEventValueChanged];
+
     }
     return self;
 }
@@ -88,6 +90,9 @@
     return [self tableView:tableView cellForDeparture:departure];
 }
 
+- (void)refreshControlValueChanged:(UIRefreshControl *)refreshControl {
+    [self refreshUpcomingDepartures];
+}
 
 #pragma mark - Table view delegate
 
