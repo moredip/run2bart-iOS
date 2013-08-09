@@ -40,6 +40,7 @@ GEM
     rack (1.5.2)
     rack-protection (1.5.0)
       rack
+    rake (10.1.0)
     rspec (2.13.0)
       rspec-core (~> 2.13.0)
       rspec-expectations (~> 2.13.0)
@@ -70,4 +71,5 @@ PLATFORMS
 
 DEPENDENCIES
   frank-cucumber (~> 1.1.10)
+  rake
   shenzhen
