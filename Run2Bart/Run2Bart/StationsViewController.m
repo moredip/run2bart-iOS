@@ -19,6 +19,12 @@
 {
     [super viewDidLoad];
     self.title = @"Stations";
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bart-tiles.png"]];
+    imageView.contentMode = UIViewContentModeScaleAspectFill;
+    imageView.alpha = 0.2;
+    self.tableView.backgroundView = imageView;
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,6 +54,8 @@
     
     Station *station = [self.stations objectAtIndex:indexPath.row];
     cell.textLabel.text = station.name;
+    cell.textLabel.backgroundColor = [UIColor clearColor];
+    cell.backgroundColor = [UIColor clearColor];
     
     return cell;
 }
