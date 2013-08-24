@@ -8,7 +8,6 @@
 
 #import "UpcomingDeparturesViewController.h"
 #import "AppDelegate.h"
-#import "BartClient.h"
 #import "Station.h"
 #import "UpcomingDeparture.h"
 
@@ -82,12 +81,31 @@
     return cell;
 }
 
+//
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    UpcomingDeparture *departure = [self.departures objectAtIndex:indexPath.row];
+//    return [self tableView:tableView cellForDeparture:departure];
+//}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    static NSString *CellIdentifier = @"Cell";
+    
     UpcomingDeparture *departure = [self.departures objectAtIndex:indexPath.row];
-    return [self tableView:tableView cellForDeparture:departure];
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if( !cell )
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
+    
+    cell.textLabel.font = [UIFont systemFontOfSize:18.0];
+    cell.detailTextLabel.font = [UIFont systemFontOfSize:24.0];
+    cell.textLabel.text = departure.destinationName;
+    cell.detailTextLabel.text = departure.etdToDisplay;
+
+    return cell;
 }
+
 
 - (void)refreshControlDidChange:(id)sender{
     [self refreshUpcomingDepartures];
