@@ -27,9 +27,6 @@
         self.station = station;
         self.title = station.name;
         self.bartClient = [AppDelegate sharedInstance].bartClient;
-        self.refreshControl = [[UIRefreshControl alloc] init];
-        self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Updating upcoming departures"];
-        [self.refreshControl addTarget:self action:@selector(refreshControlDidChange:) forControlEvents:UIControlEventValueChanged];
     }
     return self;
 }
