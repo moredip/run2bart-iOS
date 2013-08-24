@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BartClient.h"
 
 @class Station;
-@class BartClient;
 
 @interface UpcomingDeparturesViewController : UITableViewController
-@property(nonatomic,retain) BartClient *bartClient;
+@property(nonatomic,retain) NSObject<BartClient> *bartClient;
 @property(nonatomic,retain) NSArray *departures;
 
 - (id)initForStation:(Station *)station;

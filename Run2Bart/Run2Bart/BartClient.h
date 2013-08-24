@@ -10,7 +10,13 @@
 
 @class Station;
 
-@interface BartClient : NSObject
+@protocol BartClient
+- (void)fetchUpcomingDeparturesForStation:(Station *)station
+                                  success:(void (^)(NSArray *departures))success
+                                  failure:(void (^)(NSError *error))failure;
+@end
+
+@interface BartClient : NSObject<BartClient>
 
 + (BartClient *) forProductionEnv;
 

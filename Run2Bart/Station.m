@@ -14,8 +14,8 @@
 {
     NSMutableArray *stations = [NSMutableArray array];
     for(NSDictionary *rawStation in rawStations){
-        Station *station = [[Station alloc] initWithName:[rawStation objectForKey:@"name"]
-                                                    abbr:[rawStation objectForKey:@"abbr"]];
+        Station *station = [[Station alloc] initWithName:rawStation[@"name"]
+                                                    abbr:rawStation[@"abbr"]];
         [stations addObject:station];
     }
     return stations;
