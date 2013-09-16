@@ -33,13 +33,7 @@
 }
 
 - (NSString *) etdToDisplay{
-    if( [self.etdInMinutes isEqualToNumber:@(0)] ){
-        return @"now";
-    }else if( [self.etdInMinutes isEqualToNumber:@(1)] ){
-        return @"1 min";
-    }else{
-        return [NSString stringWithFormat:@"%@ mins", self.etdInMinutes];
-    }
+    return [NSString stringWithFormat:@"%@ mins", self.etdInMinutes];
 }
 
 @end
