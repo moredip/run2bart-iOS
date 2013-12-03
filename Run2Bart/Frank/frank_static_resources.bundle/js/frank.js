@@ -114,7 +114,7 @@
       fetchDevice: fetchDevice,
       requestSnapshotRefresh: requestSnapshotRefresh,
       baseScreenshotUrl: function() {
-        return cacheBust(baseUrlFor('/screenshot'));
+        return cacheBust(baseUrlFor('/screenshot/allwindows/'));
       },
       snapshotUrlForViewWithUid: function(uid) {
         return cacheBust(baseUrlFor("/screenshot/view-snapshot/" + uid));

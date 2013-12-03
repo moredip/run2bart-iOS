@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @class BartClient;
+@class StationsViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -17,5 +18,8 @@
 @property (readonly) BartClient *bartClient;
 
 +(AppDelegate *)sharedInstance;
+
+- (StationsViewController *)createStationsViewController;
+- (void) setApiBaseUrl:(NSString *)newBaseUrl;
 
 @end

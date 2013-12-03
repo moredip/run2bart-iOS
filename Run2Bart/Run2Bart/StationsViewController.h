@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StationsViewController : UITableViewController
+@interface StationsViewController : UITableViewController<UISearchDisplayDelegate>
 @property(nonatomic,retain) NSArray *stations;
 @end

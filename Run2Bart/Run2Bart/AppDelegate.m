@@ -8,14 +8,28 @@
 
 #import "AppDelegate.h"
 
+#import "LaunchViewController.h"
 #import "StationsViewController.h"
 #import "Station.h"
 #import "BartClient.h"
+
+@interface AppDelegate()
+@end
 
 @implementation AppDelegate
 
 +(AppDelegate *)sharedInstance{
     return [[UIApplication sharedApplication] delegate];
+}
+
+- (void) setApiBaseUrl:(NSString *)newBaseUrl{
+    _bartClient = [[BartClient alloc] initWithBaseURL:[NSURL URLWithString:newBaseUrl]];
+}
+
+- (StationsViewController *) createStationsViewController{
+    StationsViewController *stationsVC = [[StationsViewController alloc] init];
+    stationsVC.stations = [self loadStations];
+    return stationsVC;
 }
 
 - (NSArray *) loadStations{
@@ -30,10 +44,10 @@
 {
     _bartClient = [BartClient forProductionEnv];
     
-    StationsViewController *stationsVC = [[StationsViewController alloc] init];
-    stationsVC.stations = [self loadStations];
+    LaunchViewController *launchVC = [[LaunchViewController alloc] init];
     
-    self.navController = [[UINavigationController alloc] initWithRootViewController:stationsVC];
+    self.navController = [[UINavigationController alloc] initWithRootViewController:launchVC];
+    self.navController.navigationBar.tintColor = BART_BLUE;
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = self.navController;

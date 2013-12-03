@@ -14,3 +14,5 @@
 
     #import "AFNetworking.h"
 #endif
+
+#define BART_BLUE ([UIColor colorWithRed:0.133 green:0.412 blue:0.553 alpha:1.0])

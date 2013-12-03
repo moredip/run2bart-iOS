@@ -191,11 +191,11 @@
             fill: "#aaff00",
             opacity: 0.8,
             stroke: "black",
-            transform: _this.backdropTransformer.push().translate(origin.x, origin.y).descAndPop(),
+            transform: _this.backdropTransformer.push().translate(origin.x * resolution.scale, origin.y * resolution.scale).descAndPop(),
             x: 0,
             y: 0,
-            width: size.width,
-            height: size.height
+            width: size.width *resolution.scale,
+            height: size.height * resolution.scale
           });
         });
       }

@@ -27,7 +27,7 @@
     self = [super init];
     if (self) {
         self.api = [AFHTTPClient clientWithBaseURL:baseURL];
-        [self.api setDefaultHeader:@"Accept" value:@"application/json"];
+        [self.api setDefaultHeader:@"Accept" value:@"text/json"];
         [self.api registerHTTPOperationClass:[AFJSONRequestOperation class]];
     }
     return self;
