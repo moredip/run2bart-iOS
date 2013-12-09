@@ -61,7 +61,11 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.stationsToDisplay.count;
+    if( tableView == self.tableView ){
+        return self.stations.count;
+    }else{
+        return self.stationsToDisplay.count;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -70,8 +74,14 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if( !cell )
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    
-    Station *station = [self.stationsToDisplay objectAtIndex:indexPath.row];
+
+    Station *station = nil;
+    if( tableView == self.tableView ){
+        station = [self.stations objectAtIndex:indexPath.row];
+    }else{
+        station = [self.stationsToDisplay objectAtIndex:indexPath.row];
+    }
+
     cell.textLabel.text = station.name;
     cell.textLabel.backgroundColor = [UIColor clearColor];
     cell.backgroundColor = [UIColor clearColor];
