@@ -57,6 +57,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)didTouchNearestStation:(id)sender {
+}
+
 - (IBAction)didTouchChooseStation:(id)sender {
     StationsViewController *nextVC = [[AppDelegate sharedInstance] createStationsViewController];
     [self.navigationController pushViewController:nextVC animated:YES];

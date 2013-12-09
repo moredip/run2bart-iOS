@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C12C484418562A9700AD57A5 /* NearestStationLocatorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C12C484318562A9700AD57A5 /* NearestStationLocatorSpec.m */; };
+		C12C484718562B5600AD57A5 /* NearestStationLocator.m in Sources */ = {isa = PBXBuildFile; fileRef = C12C484618562B5600AD57A5 /* NearestStationLocator.m */; };
+		C12C484818562B5600AD57A5 /* NearestStationLocator.m in Sources */ = {isa = PBXBuildFile; fileRef = C12C484618562B5600AD57A5 /* NearestStationLocator.m */; };
+		C12C484A18562BEA00AD57A5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12C484918562BEA00AD57A5 /* CoreLocation.framework */; };
+		C12C484B18562BF400AD57A5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12C484918562BEA00AD57A5 /* CoreLocation.framework */; };
 		C13455BB170F948300180527 /* UpcomingDeparturesViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C13455BA170F948300180527 /* UpcomingDeparturesViewControllerSpec.m */; };
 		C13455BE1714801900180527 /* UpcomingDeparturesSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C13455BD1714801900180527 /* UpcomingDeparturesSpec.m */; };
 		C13CEDFB1704B873008EDAC6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C13CEDFA1704B873008EDAC6 /* UIKit.framework */; };
@@ -77,6 +82,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C12C484318562A9700AD57A5 /* NearestStationLocatorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearestStationLocatorSpec.m; sourceTree = "<group>"; };
+		C12C484518562B5600AD57A5 /* NearestStationLocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearestStationLocator.h; sourceTree = "<group>"; };
+		C12C484618562B5600AD57A5 /* NearestStationLocator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearestStationLocator.m; sourceTree = "<group>"; };
+		C12C484918562BEA00AD57A5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C13455BA170F948300180527 /* UpcomingDeparturesViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpcomingDeparturesViewControllerSpec.m; sourceTree = "<group>"; };
 		C13455BD1714801900180527 /* UpcomingDeparturesSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpcomingDeparturesSpec.m; sourceTree = "<group>"; };
 		C13CEDF61704B873008EDAC6 /* Run2Bart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Run2Bart.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,6 +151,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C12C484A18562BEA00AD57A5 /* CoreLocation.framework in Frameworks */,
 				C13CEDFB1704B873008EDAC6 /* UIKit.framework in Frameworks */,
 				C13CEDFD1704B873008EDAC6 /* Foundation.framework in Frameworks */,
 				C13CEDFF1704B873008EDAC6 /* CoreGraphics.framework in Frameworks */,
@@ -152,6 +162,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C12C484B18562BF400AD57A5 /* CoreLocation.framework in Frameworks */,
 				C1E8B2F817061961000E2F41 /* libKiwi.a in Frameworks */,
 				C13CEE1F1704B873008EDAC6 /* SenTestingKit.framework in Frameworks */,
 				C13CEE201704B873008EDAC6 /* UIKit.framework in Frameworks */,
@@ -187,6 +198,7 @@
 		C13CEDF91704B873008EDAC6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C12C484918562BEA00AD57A5 /* CoreLocation.framework */,
 				C13CEDFA1704B873008EDAC6 /* UIKit.framework */,
 				C13CEDFC1704B873008EDAC6 /* Foundation.framework */,
 				C13CEDFE1704B873008EDAC6 /* CoreGraphics.framework */,
@@ -214,6 +226,8 @@
 				C1C2064C184B298300E47C00 /* LaunchViewController.h */,
 				C1C2064D184B298300E47C00 /* LaunchViewController.m */,
 				C1C2064E184B298300E47C00 /* LaunchViewController.xib */,
+				C12C484518562B5600AD57A5 /* NearestStationLocator.h */,
+				C12C484618562B5600AD57A5 /* NearestStationLocator.m */,
 			);
 			path = Run2Bart;
 			sourceTree = "<group>";
@@ -243,6 +257,7 @@
 				C1E8B2FF170639A6000E2F41 /* StationsViewControllerSpec.m */,
 				C13455BA170F948300180527 /* UpcomingDeparturesViewControllerSpec.m */,
 				C13455BD1714801900180527 /* UpcomingDeparturesSpec.m */,
+				C12C484318562A9700AD57A5 /* NearestStationLocatorSpec.m */,
 			);
 			path = Run2BartTests;
 			sourceTree = "<group>";
@@ -418,6 +433,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C12C484718562B5600AD57A5 /* NearestStationLocator.m in Sources */,
 				C13CEE071704B873008EDAC6 /* main.m in Sources */,
 				C13CEE0B1704B873008EDAC6 /* AppDelegate.m in Sources */,
 				C177D8311704B96700836BBF /* StationsViewController.m in Sources */,
@@ -449,8 +465,10 @@
 				C177D8421705EF4A00836BBF /* UpcomingDeparture.m in Sources */,
 				C177D8581705FE0400836BBF /* AFHTTPClient.m in Sources */,
 				C177D85A1705FE0400836BBF /* AFHTTPRequestOperation.m in Sources */,
+				C12C484418562A9700AD57A5 /* NearestStationLocatorSpec.m in Sources */,
 				C177D85C1705FE0400836BBF /* AFImageRequestOperation.m in Sources */,
 				C177D85E1705FE0400836BBF /* AFJSONRequestOperation.m in Sources */,
+				C12C484818562B5600AD57A5 /* NearestStationLocator.m in Sources */,
 				C177D8601705FE0400836BBF /* AFNetworkActivityIndicatorManager.m in Sources */,
 				C177D8621705FE0400836BBF /* AFPropertyListRequestOperation.m in Sources */,
 				C177D8641705FE0400836BBF /* AFURLConnectionOperation.m in Sources */,
