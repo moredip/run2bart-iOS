@@ -11,7 +11,7 @@ describe( @"UpcomingDeparturesViewController ", ^{
     __block UpcomingDeparturesViewController *departuresVC;
     
     beforeEach(^{
-        station = [[Station alloc] initWithName:@"station name" abbr:@"station-abbr"];
+        station = [[Station alloc] initWithName:@"station name" abbr:@"station-abbr" coords:(CLLocationCoordinate2D){0.0,0.0}];
         departuresVC = [[UpcomingDeparturesViewController alloc] initForStation:station];
     });
     

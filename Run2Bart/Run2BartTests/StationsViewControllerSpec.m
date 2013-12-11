@@ -7,11 +7,12 @@
 SPEC_BEGIN(StationsViewControllerSpec)
 describe(@"StationsViewController", ^{
     describe( @"table rendering", ^{
+        const CLLocationCoordinate2D genericCoords = {0.0,0.0};
         it(@"renders the right number of rows",^{
             NSArray *stations = @[
-            [[Station alloc] initWithName:@"station one" abbr:@"s1"],
-            [[Station alloc] initWithName:@"station two" abbr:@"s2"],
-            [[Station alloc] initWithName:@"station three" abbr:@"s3"]
+            [[Station alloc] initWithName:@"station one" abbr:@"s1" coords:genericCoords],
+            [[Station alloc] initWithName:@"station two" abbr:@"s2" coords:genericCoords],
+            [[Station alloc] initWithName:@"station three" abbr:@"s3" coords:genericCoords]
             ];
             StationsViewController *stationsVC = [[StationsViewController alloc] init];
             stationsVC.stations = stations;
@@ -22,9 +23,9 @@ describe(@"StationsViewController", ^{
         
         it(@"renders table view cells correctly",^{
             NSArray *stations = @[
-            [[Station alloc] initWithName:@"station one" abbr:@"s1"],
-            [[Station alloc] initWithName:@"station two" abbr:@"s2"],
-            [[Station alloc] initWithName:@"station three" abbr:@"s3"]
+            [[Station alloc] initWithName:@"station one" abbr:@"s1" coords:genericCoords],
+            [[Station alloc] initWithName:@"station two" abbr:@"s2" coords:genericCoords],
+            [[Station alloc] initWithName:@"station three" abbr:@"s3" coords:genericCoords]
             ];
             StationsViewController *stationsVC = [[StationsViewController alloc] init];
             stationsVC.stations = stations;

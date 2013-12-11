@@ -14,21 +14,32 @@
 {
     NSMutableArray *stations = [NSMutableArray array];
     for(NSDictionary *rawStation in rawStations){
-        Station *station = [[Station alloc] initWithName:[rawStation objectForKey:@"name"]
-                                                    abbr:[rawStation objectForKey:@"abbr"]];
+        NSNumber *latitude = rawStation[@"lat"];
+        NSNumber *longitude = rawStation[@"long"];
+        CLLocationCoordinate2D coords = {latitude.doubleValue,longitude.doubleValue};
+        Station *station = [[Station alloc] initWithName:rawStation[@"name"]
+                                                    abbr:rawStation[@"abbr"]
+                                                  coords:coords];
         [stations addObject:station];
     }
     return stations;
 }
 
-- (id)initWithName:(NSString *)name abbr:(NSString *)abbr
+- (id)initWithName:(NSString *)name abbr:(NSString *)abbr coords:(CLLocationCoordinate2D)coords
 {
+    
     self = [super init];
     if (self) {
         _name = [name copy];
 		_abbr = [abbr copy];
+        _coords = coords;
     }
     return self;    
+}
+
+- (CLLocation *)location
+{
+    return [[CLLocation alloc] initWithLatitude:_coords.latitude longitude:_coords.longitude];
 }
 
 @end
