@@ -41,7 +41,7 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     
-    CLLocation *mostRecentlyReportedLocation = locations[0];
+    CLLocation *mostRecentlyReportedLocation = [locations lastObject];
     
     NSTimeInterval stalenessOfLocation = -[mostRecentlyReportedLocation.timestamp timeIntervalSinceNow];
 	NSLog( @"location is %f seconds old", stalenessOfLocation );

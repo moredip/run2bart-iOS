@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LaunchViewController : UIViewController
+#import "NearestStationLocator.h"
+
+@interface LaunchViewController : UIViewController<NearestStationLocatorDelegate>
+
++ (LaunchViewController *)newWithNearestStationLocator:(NearestStationLocator *)stationLocator;
 
 @end

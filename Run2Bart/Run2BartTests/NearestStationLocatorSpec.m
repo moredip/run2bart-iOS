@@ -55,6 +55,16 @@ describe(@"NearestStationLocator", ^{
             [locator locationManager:nil didUpdateLocations:locationUpdatesToReport];
         });
         
+        it( @"uses the most recent geolocation reported", ^{
+            [[[locatorDelegateSpy should] receive] nearestStationLocator:locator didLocateNearestStation:stations[2]];
+            
+            NSArray *locationUpdatesToReport = @[
+                                                 [[CLLocation alloc] initWithLatitude:2.0 longitude:0.1],
+                                                 [[CLLocation alloc] initWithLatitude:0.0 longitude:-4.1]
+                                                 ];
+            [locator locationManager:nil didUpdateLocations:locationUpdatesToReport];
+        });
+        
         it( @"ignores location updates older than an hour", ^{
             
             CLLocation *locationFromJustOverAnHourAgo = [[CLLocation alloc] initWithCoordinate:(CLLocationCoordinate2D){0.0,0.0}
@@ -69,8 +79,6 @@ describe(@"NearestStationLocator", ^{
         });
         
     });
-    
-    // it uses the most recent geolocation
     
     // TODO: define authorization to geolocate being granted
 });

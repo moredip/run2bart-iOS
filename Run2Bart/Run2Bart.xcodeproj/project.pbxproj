@@ -12,6 +12,7 @@
 		C12C484818562B5600AD57A5 /* NearestStationLocator.m in Sources */ = {isa = PBXBuildFile; fileRef = C12C484618562B5600AD57A5 /* NearestStationLocator.m */; };
 		C12C484A18562BEA00AD57A5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12C484918562BEA00AD57A5 /* CoreLocation.framework */; };
 		C12C484B18562BF400AD57A5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12C484918562BEA00AD57A5 /* CoreLocation.framework */; };
+		C12C484E185A219B00AD57A5 /* LaunchViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C12C484D185A219B00AD57A5 /* LaunchViewControllerSpec.m */; };
 		C13455BB170F948300180527 /* UpcomingDeparturesViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C13455BA170F948300180527 /* UpcomingDeparturesViewControllerSpec.m */; };
 		C13455BE1714801900180527 /* UpcomingDeparturesSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C13455BD1714801900180527 /* UpcomingDeparturesSpec.m */; };
 		C13CEDFB1704B873008EDAC6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C13CEDFA1704B873008EDAC6 /* UIKit.framework */; };
@@ -86,6 +87,7 @@
 		C12C484518562B5600AD57A5 /* NearestStationLocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearestStationLocator.h; sourceTree = "<group>"; };
 		C12C484618562B5600AD57A5 /* NearestStationLocator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearestStationLocator.m; sourceTree = "<group>"; };
 		C12C484918562BEA00AD57A5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C12C484D185A219B00AD57A5 /* LaunchViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchViewControllerSpec.m; sourceTree = "<group>"; };
 		C13455BA170F948300180527 /* UpcomingDeparturesViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpcomingDeparturesViewControllerSpec.m; sourceTree = "<group>"; };
 		C13455BD1714801900180527 /* UpcomingDeparturesSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpcomingDeparturesSpec.m; sourceTree = "<group>"; };
 		C13CEDF61704B873008EDAC6 /* Run2Bart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Run2Bart.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -258,6 +260,7 @@
 				C13455BA170F948300180527 /* UpcomingDeparturesViewControllerSpec.m */,
 				C13455BD1714801900180527 /* UpcomingDeparturesSpec.m */,
 				C12C484318562A9700AD57A5 /* NearestStationLocatorSpec.m */,
+				C12C484D185A219B00AD57A5 /* LaunchViewControllerSpec.m */,
 			);
 			path = Run2BartTests;
 			sourceTree = "<group>";
@@ -461,6 +464,7 @@
 				C177D8321704B96700836BBF /* StationsViewController.m in Sources */,
 				C177D837170513D700836BBF /* UpcomingDeparturesViewController.m in Sources */,
 				C177D83B170516FC00836BBF /* Station.m in Sources */,
+				C12C484E185A219B00AD57A5 /* LaunchViewControllerSpec.m in Sources */,
 				C1C20650184B298300E47C00 /* LaunchViewController.m in Sources */,
 				C177D8421705EF4A00836BBF /* UpcomingDeparture.m in Sources */,
 				C177D8581705FE0400836BBF /* AFHTTPClient.m in Sources */,

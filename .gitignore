@@ -4,6 +4,8 @@ build
 *xcuserdata*
 *xcshareddata*
 
+.idea
+
 vendor/bundle
 artifacts/
 Run2Bart/Frank/frankified_build

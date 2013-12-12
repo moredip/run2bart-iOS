@@ -12,17 +12,24 @@
 #import "StationsViewController.h"
 
 @interface LaunchViewController ()
-@property (weak, nonatomic) IBOutlet UIButton *chooseStationBtn;
+{
+    NearestStationLocator *_stationLocator;
+}
 
+@property (weak, nonatomic) IBOutlet UIButton *chooseStationBtn;
 @end
 
 @implementation LaunchViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
++ (LaunchViewController *)newWithNearestStationLocator:(NearestStationLocator *)stationLocator
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    return [[self alloc] initWithNearestStationLocator:stationLocator];
+}
+
+- (id)initWithNearestStationLocator:(NearestStationLocator *)stationLocator{
+    self = [super initWithNibName:nil bundle:nil];
     if (self) {
-        // Custom initialization
+        _stationLocator = stationLocator;
     }
     return self;
 }
