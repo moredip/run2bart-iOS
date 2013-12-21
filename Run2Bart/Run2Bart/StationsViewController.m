@@ -18,6 +18,12 @@
 
 @implementation StationsViewController
 
+- (void)setStations:(NSArray *)stations {
+    _stations = [stations sortedArrayUsingComparator: ^(id lhs, id rhs) {
+		return [[(Station *)lhs name] compare:[(Station *)rhs name]];
+    }];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
