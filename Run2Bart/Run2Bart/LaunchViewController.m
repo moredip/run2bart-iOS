@@ -10,13 +10,14 @@
 
 #import "AppDelegate.h"
 #import "StationsViewController.h"
+#import "UpcomingDeparturesViewController.h"
 
 @interface LaunchViewController ()
 {
     NearestStationLocator *_stationLocator;
+    Station *_mostRecentlyReportedNearestStation;
+    BOOL haveNotAnimatedInitialLocatingViewAway;
 }
-
-@property (weak, nonatomic) IBOutlet UIButton *chooseStationBtn;
 @end
 
 @implementation LaunchViewController
@@ -29,7 +30,11 @@
 - (id)initWithNearestStationLocator:(NearestStationLocator *)stationLocator{
     self = [super initWithNibName:nil bundle:nil];
     if (self) {
+        haveNotAnimatedInitialLocatingViewAway = YES;
+        _mostRecentlyReportedNearestStation = nil;
+        
         _stationLocator = stationLocator;
+        _stationLocator.delegate = self;
     }
     return self;
 }
@@ -48,10 +53,14 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     self.navigationController.navigationBarHidden = YES;
+    
+    [_stationLocator startLocating];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     self.navigationController.navigationBarHidden = NO;
+
+    [_stationLocator stopLocating];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle{
@@ -65,6 +74,10 @@
 }
 
 - (IBAction)didTouchNearestStation:(id)sender {
+    if( _mostRecentlyReportedNearestStation ){
+        UpcomingDeparturesViewController *nextVC = [[UpcomingDeparturesViewController alloc]initForStation:_mostRecentlyReportedNearestStation];
+        [self.navigationController pushViewController:nextVC animated:YES];
+    }
 }
 
 - (IBAction)didTouchChooseStation:(id)sender {
@@ -72,17 +85,36 @@
     [self.navigationController pushViewController:nextVC animated:YES];
 }
 
-//- (void)prepareGeolocation{
-//    //	if( ![ CLLocationManager locationServicesEnabled] ){
-//    //		// TODO: tell user location stuff not enabled
-//    //		return;
-//    //	}
-//	
-//	[_locationManager release];
-//	_locationManager = [[CLLocationManager alloc] init];
-//	_locationManager.delegate = self;
-//	NSLog(@"looking up location...");
-//	[_locationManager startUpdatingLocation];
-//}
+- (void) animateLocatingUIAway{
+	CGPoint newCenter = CGPointMake(self.locatingView.center.x, self.locatingView.center.y-120);
+	[UIView animateWithDuration:0.3
+					 animations:^{
+						 self.locatingView.center = newCenter;
+						 for (UIView *subview in [self.locatingView subviews]) {
+							 if( ![subview isKindOfClass:[UIImageView class]] ) //don't fade out the background image
+								 subview.alpha = 0.0;
+						 }
+					 }
+					 completion:^(BOOL finished){
+                         //						 [_locatingView setHidden:YES];
+                         //						 [_locatingView setAlpha:1.0];
+					 }];
+}
+
+
+#pragma -
+#pragma NearestStationLocatorDelegate impl
+
+- (void) nearestStationLocator:(NearestStationLocator *)locator didLocateNearestStation:(Station *)station{
+
+    _mostRecentlyReportedNearestStation = station;
+    [self.nearestStationBtn setTitle:_mostRecentlyReportedNearestStation.name forState:UIControlStateNormal];
+    
+    if( haveNotAnimatedInitialLocatingViewAway )
+    {
+        [self animateLocatingUIAway];
+        haveNotAnimatedInitialLocatingViewAway = NO;
+    }
+}
 
 @end

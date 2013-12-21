@@ -62,6 +62,7 @@
 		C1C20652184B298300E47C00 /* LaunchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1C2064E184B298300E47C00 /* LaunchViewController.xib */; };
 		C1C20655184B2BB600E47C00 /* BART shear.png in Resources */ = {isa = PBXBuildFile; fileRef = C1C20654184B2BB600E47C00 /* BART shear.png */; };
 		C1C20656184B2BB600E47C00 /* BART shear.png in Resources */ = {isa = PBXBuildFile; fileRef = C1C20654184B2BB600E47C00 /* BART shear.png */; };
+		C1D5B59518654EE3002C25F3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C13CEDFE1704B873008EDAC6 /* CoreGraphics.framework */; };
 		C1E8B2F6170616AE000E2F41 /* ExampleSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E8B2F5170616AE000E2F41 /* ExampleSpec.m */; };
 		C1E8B2F817061961000E2F41 /* libKiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1E8B2F717061960000E2F41 /* libKiwi.a */; };
 		C1E8B2FC17063831000E2F41 /* StationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E8B2FB17063831000E2F41 /* StationSpec.m */; };
@@ -164,6 +165,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1D5B59518654EE3002C25F3 /* CoreGraphics.framework in Frameworks */,
 				C12C484B18562BF400AD57A5 /* CoreLocation.framework in Frameworks */,
 				C1E8B2F817061961000E2F41 /* libKiwi.a in Frameworks */,
 				C13CEE1F1704B873008EDAC6 /* SenTestingKit.framework in Frameworks */,

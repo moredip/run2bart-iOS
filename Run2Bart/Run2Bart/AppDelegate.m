@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 ThoughtWorks. All rights reserved.
 //
 
+#import <CoreLocation/CoreLocation.h>
+
 #import "AppDelegate.h"
 
 #import "LaunchViewController.h"
@@ -44,7 +46,13 @@
 {
     _bartClient = [BartClient forProductionEnv];
     
-    LaunchViewController *launchVC = [[LaunchViewController alloc] init];
+    CLLocationManager *locationManager = [[CLLocationManager alloc] init];
+    NSArray *stations = [self loadStations];
+    
+    NearestStationLocator *stationLocator = [[NearestStationLocator alloc] initWithLocationManager:locationManager
+                                                                                       stationList:stations];
+
+    LaunchViewController *launchVC = [LaunchViewController newWithNearestStationLocator:stationLocator];
     
     self.navController = [[UINavigationController alloc] initWithRootViewController:launchVC];
     self.navController.navigationBar.tintColor = BART_BLUE;

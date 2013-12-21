@@ -30,6 +30,15 @@ describe(@"NearestStationLocator", ^{
         });
     });
     
+    
+    describe(@"when asked to stop locating", ^{
+        it(@"should tell the location manager to stop updates", ^{
+            [[[mockLocationManager should] receive] stopUpdatingLocation];
+
+             [locator stopLocating];
+         });
+     });
+    
     describe(@"when location updates come in", ^{
         __block NSArray *stations;
         __block id locatorDelegateSpy;
@@ -79,6 +88,7 @@ describe(@"NearestStationLocator", ^{
         });
         
     });
+
     
     // TODO: define authorization to geolocate being granted
 });

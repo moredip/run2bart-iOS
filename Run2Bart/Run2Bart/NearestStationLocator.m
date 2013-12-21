@@ -39,6 +39,10 @@
     return YES;
 }
 
+- (void)stopLocating{
+    [_locationManager stopUpdatingLocation];
+}
+
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     
     CLLocation *mostRecentlyReportedLocation = [locations lastObject];
@@ -64,6 +68,7 @@
 	}];
     
     Station *nearestStation = stationsSortedByDistance[0];
+    NSLog(@"nearest station: %@", nearestStation.name);
     [self.delegate nearestStationLocator:self didLocateNearestStation:nearestStation];
 }
 

@@ -11,6 +11,9 @@
 #import "NearestStationLocator.h"
 
 @interface LaunchViewController : UIViewController<NearestStationLocatorDelegate>
+@property (weak, nonatomic) IBOutlet UIView *locatingView;
+@property (weak, nonatomic) IBOutlet UIButton *nearestStationBtn;
+@property (weak, nonatomic) IBOutlet UIButton *chooseStationBtn;
 
 + (LaunchViewController *)newWithNearestStationLocator:(NearestStationLocator *)stationLocator;
 

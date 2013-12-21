@@ -26,5 +26,6 @@
 - (id)initWithLocationManager:(CLLocationManager *)locationManager stationList:(NSArray *)stations;
 
 - (BOOL)startLocating;
+- (void)stopLocating;
 
 @end
